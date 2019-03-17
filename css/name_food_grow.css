@@ -1,0 +1,849 @@
+[genuitec-file-id="wc2-23"],[genuitec-lp-path="/Zoo/WebRoot/css/name_food_grow.css"],[genuitec-lp-enabled=false]{
+  /* for codelive */
+}
+
+@CHARSET "UTF-8";
+html,
+body,
+form,
+.container,
+.contain,
+.scan_img,
+.voice-container {
+  width: 100%;
+  height: 100%;
+}
+.container,
+.contain {
+  display: block;
+  /*visibility: hidden;*/
+  z-index: 10;
+}
+.container {
+  background-size: cover;
+}
+.voice-container {
+  z-index: 200;
+  position: absolute;
+  /*visibility: hidden;*/
+  background: rgba(0, 0, 0, 0.4);
+}
+.btn {
+  position: absolute;
+}
+.touchrecord {
+  position: absolute;
+  display: block;
+  z-index: 2;
+  width: 0;
+  left: -100px;
+}
+/*#container {
+  position: absolute;
+  top: 10%;
+  left: 12%;
+  width: 78%;
+  height: 80%;
+}*/
+/*自定义进度条*/
+.content-scroll::-webkit-scrollbar-track {
+  height: 100%;
+  background-color: #dd6849;
+  border: 2px solid #dd6849;
+  border-radius: 10px;
+}
+.content-scroll::-webkit-scrollbar-button {
+  height: 2.5%;
+}
+.content-scroll::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 3px solid #dd6849;
+}
+.content-scroll::-webkit-scrollbar {
+  width: 15px;
+  height: 0;
+}
+/*12.04 tangzhen add begin*/
+@font-face {
+  font-family: "WAWA";
+  src: url("wawa.TTF");
+}
+@font-face {
+  font-family: "Huifont";
+  src: url("HuiFont.ttf");
+}
+body {
+  font-family: "WAWA";
+}
+.huifont {
+  font-family: "Huifont";
+}
+.contain > *,
+body > * {
+  position: fixed;
+  z-index: 1;
+}
+.go-back,
+.close,
+.volume {
+  /* position: fixed;
+  top: 6%;
+  right: 3%;
+  width: 12%; */
+  display: inline-block;
+  width: .4rem;
+}
+
+.description {
+  position: relative;
+  margin: 2% 0 0 5%;
+  width: 82%;
+  text-align: justify;
+  padding: 10% 3% 9% 6%;
+  font-size: 0.18rem;
+  /* background: url(../img/quotation_left.png) left top/11% no-repeat padding-box,
+    url(../img/quotation_right.png) right bottom/11% no-repeat padding-box; */
+}
+.a-btn-div {
+  position: absolute;
+  bottom: 4%;
+  width: 100%;
+  text-align: center;
+}
+.grow-btn {
+  display: inline-block;
+  margin-left: 2%;
+  color: #81664d !important;
+  padding: 0.1rem 0.15rem;
+  font-size: 0.25rem;
+  background: #7c5a48;
+  font-weight: bold;
+  border-radius: .2rem;
+}
+.grow-btn-selected {
+  background-color: #e5d3ab;
+}
+/*12.04 tangzhen add end*/
+img {
+  display: block;
+}
+.logo {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 60%;
+}
+.seefun_btn {
+  position: absolute;
+  left: 32%;
+  bottom: 20%;
+  width: 36%;
+}
+.food {
+  position: absolute;
+  left: .06rem;
+  top: .78rem;
+  width: 3.62rem;
+  height: 4.60rem;
+  background: url("../image/bottom-2.png");
+  background-size: 100% 100%;
+  z-index: 10;
+  overflow: hidden;
+}
+.food .quotation_circle {
+  position: absolute;
+  left: .14rem;
+  top: .15rem;
+  width: 2rem;
+  height: .75rem;
+  z-index: 11;
+}
+.food .love_food {
+  position: static;
+  text-align: center;
+  display: block;
+  width: auto;
+  height: auto;
+  margin-bottom: 0;
+  /* border: 2px solid #954232; */
+}
+.food .love_food p {
+  margin: 0 auto;
+  display: inline-block;
+  position: static;
+  width: 2.5rem;
+  height: .88rem;
+  color: #e8b236;
+  font-size: .48rem;
+  line-height: .88rem;
+  text-align: center;
+  font-weight: bold;
+}
+.food_list {
+  position: absolute;
+  width: 85%;
+  padding-right: 2%;
+  left: 8%;
+  top: 11%;
+  height: 80.5%;
+  overflow: auto;
+}
+.food_list > div {
+  display: inline-block;
+  position: relative;
+  width: 49%;
+  height: 1.2rem;
+  margin-bottom: .25rem;
+  /* margin-top: 2%; */
+}
+.food_list > div + div {
+  background: url('../image/pic_border.png') -.02rem -.08rem no-repeat;
+  background-size: cover;
+}
+.food_list > div > div {
+  position: absolute;
+  width: auto;
+  text-align: center;
+}
+.food_list > div img:first-child {
+  display: inline-block;
+  width: 1.3rem;
+  height: 1.1rem;
+  border-radius: 50%;
+}
+.food_list > div img + img {
+  display: inline-block;
+  width: 14%;
+  margin: 2% 0 0 1%;
+}
+.food_list p {
+  position: absolute;
+  top: -6%;
+  right: 0%;
+  width: .6rem;
+  height: .43rem;
+  border-radius: 50%;
+  color: white;
+  font-size: .2rem;
+  line-height: .43rem;
+  text-align: center;
+}
+.food_list > div + div p {
+  background-color: #8d6851;
+}
+.food_list span {
+  position: absolute;
+  color: #4f4f4f;
+  font-size: .2rem;
+  top: 31%;
+  right: 2%;
+  font-weight: bold;
+}
+.grow {
+  position: absolute;
+  left: .06rem;
+  top: .78rem;
+  width: 3.62rem;
+  height: 4.6rem;
+  background: url("../image/growup-02.png");
+  background-size: 100% 100%;
+  border-radius: .5rem;
+  border: 1px solid #7f634a;
+  text-align: center;
+  z-index: 10;
+}
+.grow_pic {
+  width: 100%;
+  height: 100%;
+}
+.grow p {
+  font-size: .44rem;
+  /* height: .92rem;
+  line-height: .92rem; */
+  padding: .04rem .12rem;
+  text-align: center;
+  margin: .7rem auto 0;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: .2rem;
+}
+.grow .img_frame > img {
+  width: 100%;
+  height: 100%;
+}
+.grow .img_frame > div {
+  position: relative;
+  border: 1px solid #7e634b;
+  margin-top: .2rem;
+  display: inline-block;
+  background: url('../image/bear_name1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 100% 95%;
+}
+.rotate_left {
+  transform: rotate(-8deg);
+}
+.rotate_right {
+  transform: rotate(8deg);
+}
+.grow :nth-child(2) {
+  color: #299d92;
+}
+.grow :nth-child(3) {
+  color: #db583e;
+}
+.grow :nth-child(4) {
+  color: #dca830;
+}
+.grow :nth-child(5) {
+  color: #7d6148;
+}
+.grow .grow_decoration {
+  position: absolute;
+  left: .2rem;
+  top: .16rem;
+  height: .85rem;
+  z-index: 10;
+}
+
+.grow .img_frame {
+  position: absolute;
+  left: .2rem;
+  top: 1.3rem;
+  width: 3.2rem;
+  height: 2.12rem;
+  z-index: 10;
+}
+.name {
+  position: absolute;
+  left: .06rem;
+  top: .78rem;
+  width: 3.62rem;
+  height: 4.6rem;
+  background: url("../image/bottom.png");
+  background-size: 100% 100%;
+  z-index: 10;
+}
+.quotation_left {
+  position: absolute;
+  left: .23rem;
+  top: .18rem;
+  /* width: .84rem; */
+  height: .36rem;
+  /* background: url("../img/quotation_left.png"); 
+  background-size: 100% 100%;
+  transform: rotate(20deg);*/
+  z-index: 10;
+}
+.name .font {
+  margin-top: .4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: .7rem;
+}
+.name .font p:nth-child(1) {
+  font-size: .40rem;
+  color: #ffffff;
+}
+.name .font p:nth-child(2) {
+  font-size: .40rem;
+  color: #ffffff;
+}
+.name .describe-wrapper {
+  background: url("../image/loveeat-10.png") no-repeat 0 0/100% 100%;
+  padding: .2rem .2rem .3rem;
+  line-height: .2rem;
+  margin: 0 .4rem;
+}
+.name .describe {
+  width: 2.4rem;
+  margin: 0 auto;
+  color: #ffffff;
+  font-size: .24rem;
+}
+.name .img_frame {
+  position: absolute;
+  left: .26rem;
+  top: 1.6rem;
+  width: 3.06rem;
+  height: 2.5rem;
+  /* background: url("../img/img_frame.png"); */
+  background-size: 100% 100%;
+  z-index: 10;
+}
+.name .img_frame img {
+  width: 100%;
+  height: 100%;
+  /* margin: 0.29rem 0.25rem; */
+}
+.name .img_frame > div {
+  position: relative;
+  border: 1px solid #e8b237;
+  margin-top: .2rem;
+  display: inline-block;
+  background: url('../image/bear_name1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 100% 95%;
+  height: 2.1rem;
+}
+.name ul {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  left: 1.45rem;
+  bottom: .5rem;
+  width: .71rem;
+  height: .11rem;
+}
+.name ul li {
+  width: .1rem;
+  height: .1rem;
+  border: solid .02rem #e7ca40;
+  background-color: #e7ca40;
+  border-radius: 50%;
+}
+.name .arrow {
+  position: absolute;
+  left: 1.64rem;
+  bottom: .08rem;
+  width: .34rem;
+  height: .28rem;
+  background: url("../image/goup.png");
+  background-size: 100% 100%;
+  z-index: 10;
+  transform: rotate(180deg);
+}
+.name2 {
+  display: none;
+  position: absolute;
+  left: .06rem;
+  top: .78rem;
+  /*top: 5.46rem;*/
+  width: 3.62rem;
+  height: 4.6rem;
+  background: url('../image/bottom-3.png');
+  background-size: 100% 100%;
+  z-index: 12;
+}
+.name2 .quotation_left {
+  position: absolute;
+  left: .23rem;
+  top: .27rem;
+  width: .25rem;
+  height: .21rem;
+  background: url("../image/volume.png");
+  background-size: 100% 100%;
+  z-index: 10;
+  /* transform: rotate(20deg); */
+}
+.name2 .quotation_right {
+  position: absolute;
+  right: .15rem;
+  bottom: .18rem;
+  width: .3rem;
+  height: .21rem;
+  background: url("../img/quotation_right.png");
+  background-size: 100% 100%;
+  z-index: 10;
+}
+.name2 .voice_btn {
+  position: absolute;
+  right: .2rem;
+  top: .22rem;
+  /* width: .31rem; */
+  height: .23rem;
+  /* background: url("../img/voice_btn.png");
+  background-size: 100% 100%; */
+  z-index: 10;
+}
+/* .name2 .voice_btn_pressed {
+  background: url("../img/voice_btn_pressed.png");
+  background-size: 100% 100%;
+} */
+.name2 p {
+  position: absolute;
+  left: .32rem;
+  bottom: .55rem;
+  width: 3rem;
+  height: 3.4rem;
+  color: #fff;
+  font-size: .18rem;
+  overflow: auto;
+  font-weight: bold;
+}
+.name2 .arrow {
+  position: absolute;
+  left: 1.64rem;
+  bottom: .05rem;
+  width: .34rem;
+  height: .28rem;
+  background: url("../image/goup.png");
+  background-size: 100% 100%;
+  z-index: 10;
+}
+
+/*place*/
+.place {
+  position: absolute;
+  left: .06rem;
+  top: .78rem;
+  width: 3.62rem;
+  height: 4.6rem;
+  background: url("../image/place_bottom.png");
+  background-size: 100% 100%;
+  border-radius: .5rem;
+  border: 1px solid #7f634a;
+  text-align: center;
+  z-index: 10;
+}
+.place_pic {
+  width: 100%;
+  left: 1rem;
+  top: 1rem;
+}
+.place p {
+  font-size: .44rem;
+  /* height: .92rem;
+  line-height: .92rem; */
+  padding: .04rem .12rem;
+  text-align: center;
+  margin: .7rem auto 0;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: .2rem;
+}
+.place .img_frame > div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-top: .2rem;
+  display: inline-block;
+  background: url('../image/place_map.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 100% 95%;
+}
+.place :nth-child(2) {
+  color: #299d92;
+}
+.place :nth-child(3) {
+  color: #a5b129;
+}
+.place :nth-child(4) {
+  color: #7d654f;
+}
+.place :nth-child(5) {
+  color: #ae352f;
+}
+.place .place_decoration {
+  position: absolute;
+  left: .2rem;
+  top: .16rem;
+  height: .85rem;
+  z-index: 10;
+}
+
+.place .img_frame {
+  position: absolute;
+  left: .1rem;
+  top: 1.4rem;
+  width: 3.4rem;
+  height: 2rem;
+  z-index: 10;
+}
+.place-btn {
+  display: inline-block;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  color: #24a3a0 !important;
+  padding: 0.15rem 0.1rem;
+  font-size: 0.16rem;
+  background: #fff;
+  font-weight: bold;
+  border-radius: .2rem;
+}
+.place-btn-selected {
+  color: #fff !important;
+  background-color: #e85a3e;
+}
+
+/* zcf star border */
+.border-star {
+  width: 5% !important;
+  height: 6% !important;
+  position: absolute !important;
+}
+.border-point {
+  width: 2% !important;
+  height: 3% !important;
+  position: absolute !important;
+}
+.large {
+  width: .8% !important;
+  height: 1.2% !important;
+}
+.small {
+  width: 1% !important;
+  height: 1.8% !important;
+}
+.top-left {
+  left: .1rem;
+  top: .1rem;
+}
+.top-right {
+  right: .1rem;
+  top: .1rem;
+}
+.bottom-left {
+  left: .3rem;
+  bottom: .2rem;
+}
+.top-left-1 {
+  left: .02rem;
+  top: .8rem;
+}
+.top-left-2 {
+  left: .4rem;
+  top: .05rem;
+}
+.top-left-3 {
+  left: .6rem;
+  top: .06rem;
+}
+.top-right-1 {
+  right: .4rem;
+  top: .1rem;
+}
+.top-right-2 {
+  right: .6rem;
+  top: .05rem;
+}
+.top-right-3 {
+  right: .1rem;
+  top: .8rem;
+}
+.bottom-btn-wrapper {
+  position: absolute;
+  left: 1.4rem;
+  top: 5.4rem;
+}
+
+.personality {
+  position: absolute;
+  left: 6%;
+  top: .78rem;
+  width: 88%;
+  height: 4.6rem;
+  background: #a7b815;
+  border-radius: 50px;
+  z-index: 10;
+}
+
+#char_content {
+  margin-left: 8%;
+  margin-top: 19%;
+  width: 88%;
+  height: 3.32rem;
+  overflow: scroll;
+}
+
+.person_title {
+  color: #faf3dd;
+  font-size: 0.36rem;
+  letter-spacing: 2px;
+}
+
+.personality .describe-wrapper {
+  background: url("../image/character-06.png") no-repeat 0 0/100% 100%;
+  padding: .13rem .15rem .3rem;
+  margin: 3% .4rem 3% .1rem;
+}
+
+.describe-pic-wrapper {
+  background: url("../image/character-05.png") no-repeat 0 0/100% 100%;
+  padding: .13rem .15rem .3rem;
+  margin: 3%;
+}
+
+.description-p {
+  color: #777b31;
+  font-size: .18rem;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.description-p-pic {
+  color: #ffffff;
+  font-size: .25rem;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+
+.character-div {
+  color: #faf3dd;
+  font-size: 0.22rem;
+  font-weight: bold;
+  min-height: 2.5rem;
+}
+
+.character-div span {
+  padding-left: 4%;
+}
+
+.character-div div {
+  margin-top: 1%;
+}
+
+.character-div img {
+  display: inline-block;
+  width: 10%;
+  margin-left: 1%;
+}
+.feature {
+  position: absolute;
+  left: 6%;
+  top: .78rem;
+  width: 88%;
+  height: 4.6rem;
+  background: #eee3ce;
+  border-radius: 50px;
+  z-index: 10;
+  overflow: scroll;
+}
+
+.feature > div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.feature > div > * {
+  position: absolute;
+}
+
+.feature h1 {
+  color: #e9b322;
+  font-size: .4rem;
+  top: .24rem;
+  left: .3rem;
+}
+
+.feature .describe-wrapper {
+  background: url("../image/wierd-dialog.png") no-repeat 0 0/100% 100%;
+  padding: .12rem .15rem .3rem;
+  color: #c2a97c;
+  font-size: .18rem;
+  text-indent: 2em;
+  top: 0.88rem;
+  z-index: 20;
+}
+
+.feature .wrapper1 {
+  left: 6%;
+  width: 68%;
+}
+
+.feature .wrapper2 {
+  right: 6%;
+  width: 68%;
+}
+
+.feature .wrapper3 {
+  right: 6%;
+  width: 78%;
+}
+
+.description-feature {
+  padding-bottom: 0.1rem;
+}
+
+.feature .img {
+  width: 100%;
+  bottom: 0;
+}
+
+.feature-pic-top {
+  z-index: 15;
+}
+/* 170703 tanngzhen add voice animate begin*/
+.voice-load,
+.voice-touch {
+  position: absolute;
+  left: 40%;
+  bottom: 16%;
+  width: 20%;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+.voice-touch {
+  z-index: 60;
+  display: block;
+  height: 17%;
+}
+.loader,
+.loader:before,
+.loader:after {
+  display: inline-block;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load 1.8s infinite ease-in-out;
+  animation: load 1.8s infinite ease-in-out;
+}
+.loader {
+  position: relative;
+  left: 13px;
+  top: -2px;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.loader:before {
+  left: -8px;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 8px;
+}
+@keyframes load {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 5px 0 -2px;
+  }
+  40% {
+    box-shadow: 0 5px 0 0;
+  }
+}
+.voice-tip,
+.voice-title {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+}
+.voice-title {
+  font-size: 0.35rem;
+  top: 10%;
+  color: #bbcc22;
+}
+.voice-tip {
+  font-size: 0.25rem;
+  bottom: 10%;
+  color: #17a3a1;
+  /*display:none;*/
+}
+/* 170703 tanngzhen add voice animate end*/

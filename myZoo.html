@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html style="height:100%;">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+		<link rel="stylesheet" href="css/reset.min.css" />
+		<link rel="stylesheet" href="./Zooseefun_shop/css/common.css" />
+		<link rel="stylesheet" href="css/allAnimalInMap.css">
+		<script type="text/javascript" src="http://api.map.baidu.com/library/GeoUtils/1.2/src/GeoUtils_min.js"></script>
+        <script src="http://api.map.baidu.com/api?v=2.0&ak=f99kAEYGls7AOagGUFFBkgwb" type="text/javascript"></script>
+	</head>
+	<style>
+		  .info{
+			   position: fixed;
+			   width:100%;
+			   z-index:999;
+			   background:#000;
+			   height:100px;
+			   bottom:0px;
+			   left:0px;
+		  }
+		  .info span{
+			   font-size:20px;
+			   color:#fff;
+			   display:block;
+		  }
+	</style>
+	<body style="height:100%;">
+	  <div class="header fix-header">
+	  	 	<div class="container">
+	  	 		<div class="container">
+	  	 			
+		  	 		<div class="header_tit">
+		  	 			<a href="javascript:history.back(-1)" class="close return_btn"></a>	
+                           <h1>我的动物园</h1>
+		  	 		</div>
+	  	 	    </div>
+	  	 	</div>
+      </div>
+      <div class="fullMap" style="height:100%">
+          <div id="container" style="height:100%"></div>
+	  </div>
+      <script src="js/zepto.min.js"></script>
+	  <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	  <script src="js/common.js"></script>
+	  <script src="js/myZoo.js"></script>
+	</body>
+</html>
+

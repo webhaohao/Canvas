@@ -1,0 +1,2696 @@
+
+    
+        
+        
+
+        <!DOCTYPE HTML>
+        <html style="font-size:100px;">
+        <head>
+        <meta content="telephone=no" name="format-detection" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=0.5,maximum-scale=0.5,user-scalable=no">
+        <title>北京动物园</title>
+        <meta content="电子导游,电子导游APP,电子导游讲解器,APP电子导游,语音电子导游" name="keywords">
+        <meta
+        content="驴迹电子导游APP(原咪咪电子导游)是一款景区导游信息服务app,驴迹电子导游讲解器旨在帮助游客自助的进行旅游导游服务,满足用户在旅行中各种与旅游相关的需求.为游客推荐最佳旅游线路,选择更轻松,驴迹APP电子导游不一样的旅游体验.咨询电话:4008-656-151."
+        name="description">
+        <script type='text/javascript'>
+        (function(f,j){var i=document,d=window;var b=i.documentElement;var c;function g(){var
+        k=b.getBoundingClientRect().width;if(!j){j=1080}if(k>j){k=j}var
+        l=k*100/f;b.style.fontSize=(l>100?100:l)+"px";}g();d.addEventListener("pageshow",function(k){if(k.persisted){clearTimeout(c);c=setTimeout(g,300)}},false)})(750,1080);
+        </script>
+        <link href="/web/favicon.ico" rel="icon" type="image/x-icon" />
+        <link type="text/css" rel="stylesheet" href="css/arshaan.1.0.css" />
+        <script>
+        //百度统计
+        var _hmt = _hmt || [];
+        (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?8d6277cc5fcfc1ad29a1be2c3504abba";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+
+        </head>
+        
+        <body class='   '>
+        <!-- 顶部app推广下载条 -->
+        <div class="app-popularize doubletap-disable">
+        
+        
+        <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.t20000.lvji" target='_blank'>
+        <img class="hide-ele" src='images/lvjiapp2-logo.png' alt='北京动物园' />
+        <p class='scenic-name hide-ele'>北京动物园</p>
+        <p class='slogan'>提前下载离线包，节省90%流量！</p>
+        <span class='btn'></span>
+        </a>
+        <div id='closePopularize' class="close-btn"></div>
+        </div>
+
+        <div id="map"></div>
+
+        <div class="rightTop-btns doubletap-disable">
+        <div class='ad-container'>
+        
+        <!-- <a class="ad" target="_blank" href="/web/scenicGuideshowScenicGuideDetail?id=360">
+        <span class="Ht-icon" style="background-image:
+        url('/cm/fileOpviewFile?fileName=mimi-002_1459324418302-jh8vf3jp.png');"></span>
+        <span class="title">特产</span>
+        </a>
+        <a class="ad" target="_blank" href="/web/scenicGuideshowScenicGuideDetail?id=361">
+        <span class="Ht-icon" style="background-image:
+        url('/cm/fileOpviewFile?fileName=mimi-002_1459324426600-g4xl0k39.png');"></span>
+        <span class="title">图集</span>
+        </a>
+        <a class="ad" target="_blank" href="/web/scenicGuideshowScenicGuideDetail?id=362">
+        <span class="Ht-icon" style="background-image:
+        url('/cm/fileOpviewFile?fileName=mimi-002_1459324437073-v72z3lyw.png');"></span>
+        <span class="title">游记</span>
+        </a> -->
+        </div>
+        <div class="other-btns no-ad ">
+        <div class="help-icon-con">
+        <span class="intr-icon"></span>
+        <span class="help-icon"></span>
+        </div>
+        <div class="audio-list-icon"></div>
+        
+            <div id="autoPlay" class='auto-play'></div>
+        
+        </div>
+        </div>
+        
+
+        <div id="mapLocateBtn" class='local-btn doubletap-disable'></div>
+        <div class="error-correction doubletap-disable"></div>
+        <div class="zoom-control doubletap-disable">
+        <span class="zoombtn add"></span><span class="zoombtn minu"></span>
+        </div>
+        
+        <div class="menu-wrapper ">
+        <div class="menu-list">
+        <div id="menuListScroll" class="menu-list-nav">
+        <ul>
+
+        <li data-tab="scenic" class="active">
+        <div>
+        <img class="img-active" src="images/scenic-list-active.png" /><img class="img-un-active"
+        src="images/scenic-list-unActive.png" />
+        </div>
+        景点
+        </li>
+        <li data-tab="road" >
+        <div><img class="img-un-active" src="images/road-list-unActive.png"><img class="img-active"
+        src="images/road-list-active.png"></div>
+
+        
+        
+            路线
+        
+        
+
+        </li>
+
+        </ul>
+        <div class="fold-btn"></div>
+        </div>
+        </div>
+
+        <div class="menu-content">
+        <!-- 景点列表 -->
+        <div class="scenicList-nav tool-nav active ">
+
+        <dt>
+        <input type="text" autocomplete="off" autocorrect="off" id="spotsSearch" placeholder="请输入景点">
+
+        </dt>
+        <div id="sceniclistWrap" class="sceniclist-wrap scroll">
+        <ul id="sceniclist">
+
+        </ul>
+        </div>
+        </div>
+
+        <div class="roads-list-wrapper tool-nav modal ">
+        <div id="roadsListScroll" class="scroll enable-touchmove scroll">
+        <ul id="recommendRoad">
+        </ul>
+        </div>
+        </div>
+
+        </div>
+        </div>
+        <!--一些弹框 路线、语音类型、投诉等 -->
+        <div class="modals doubletap-disable">
+        <!-- 后端聚合 开始-->
+        <div class="marker-group modal " data-bg="true">
+        <div class="group-intr">
+        <div class="progress-bar">
+        <div class="slice">
+        <div class="than-half"></div>
+        <div class="more-half"></div>
+        </div>
+        </div>
+        <p class="title">白云深雾等3个景点</p>
+        <p class="content">一座山水园林与岭南建筑相融、艺术珍品与岭南园林并茂的大型山水园林。</p>
+        <span class="show-more"></span>
+        </div>
+        <div id="group-list-scroll" class="group-list">
+        <dl>
+
+        </dl>
+        </div>
+        <div class="footer"></div>
+        </div>
+        <!-- 后端聚合 结束-->
+        <!-- 子景点组 开始-->
+
+        <div class="child-group-markers modal hide " data-bg="true">
+
+          <div class="child-group-container" >
+          
+            </div>
+            <script id="child_group_marker" type="text/html">
+                    <div class="group-intr">
+                        <div class="boli-bg" style="background-image:url({{''+markerData.viweImgUrl?markerData.viweImgUrl:'./images/test/services-test.png'}})"></div>
+                        <div class="progress-bar marker{{markerData.viweID}} " data-scenicid="{{markerData.viweID}}" style="background-image:url({{''+markerData.viweImgUrl?markerData.viweImgUrl:'./images/test/services-test.png'}})">
+                            <div class="slice">
+                                <div class="than-half"></div>
+                                <div class="more-half"></div>
+                            </div>
+                        </div>
+                        <p class="title">{{markerData.viweName}}</p>
+                        <p class="content">{{markerData.introduction}}</p>
+                        
+                        <span class="show-more" ></span>
+                    </div>
+                
+                    <ul id="scenic-group-list-scroll" class="group-list">
+                        {{if content && content.length>0}}
+                            
+                            {{each content val key}}
+                                    
+                                    <li class='group-item item2'>
+                                        {{if  val.childScenics && val.childScenics.length>0 }}
+                                            <div class="fu-title">{{val.name}}</div>
+                                            
+                                                <ul class='scenic-group' data-scenicId="{{val.id}}">
+                                                
+                                                        {{each val.childScenics scenic index}}
+                                                            <li class='scenic-item'  >
+                                                                <span class="images {{scenic.playState?scenic.playState:''}} marker{{scenic.id}}" data-scenicId='{{scenic.id}}' style="background:url('https://map.365daoyou.cn/cm/fileOpviewFile?fileName={{scenic.picThumbName}}') center/cover"></span>
+                                                                <p class="scenic-name">{{scenic.name}}</p>	
+                                                                
+                                                                <span class="show-more" data-title='{{scenic.name}}' data-scenicId='{{scenic.id}}' data-desc='{{scenic.detail}}' data-lat='{{scenic.lat}}' data-lon='{{scenic.lon}}' ><em>查看详情</em></span>
+                                                            </li>
+                                                        {{/each}}
+                                                
+                                                </ul>
+                                            
+                                        </li>
+                                    {{/if}}
+                            
+                            {{/each}}
+
+                        {{/if}}
+                    
+                         
+
+                    </ul>
+                    
+                    
+                <div class="footer-container">
+                    <div class="footer"></div>
+                </div>
+                
+            </script>	
+
+        </div>
+        <!-- 子景点组 结束-->
+
+        <!-- 广告弹窗 -->
+        <div class='advertisement-wrap modal close-by-self '>
+        <span class="close-btn close-icon" ></span>
+        <div class='advertisement'>
+        <!--
+        
+            
+            
+                <img src="images/Tip_pic.png">
+            
+        
+        -->
+        <img src="images/Tip_pic.png">
+        <h3>您已进入北京动物园</h3>
+        <p>请问是否开始景区自动导游？</p>
+        </div>
+
+        <div id="confirmYes" class="confirm-on"></div>
+
+        </div>
+
+        <!--一推荐路线菜单结束-->
+
+        <!--一语音类型菜单 -->
+        <div class="audio-list-wrapper tool-nav modal ">
+        <dt>
+        <span class="title-nav">语音选择</span>
+        <span class="close-btn close-icon" ></span>
+        </dt>
+        <div id="audioListScroll" class="scroll enable-touchmove ">
+        <ul id="audioList" class="audio-types">
+        
+            
+                
+                
+                    
+                    
+                        
+                        <div class="tips" >小提示：御姐女神为系统默认语音。</div>
+                    
+                
+                <li class="default" audioId="1-2">
+                
+                
+                    <i style="background-image: url('https://map.365daoyou.cn/cm/fileOpviewFile?fileName=mimi-001_1412910390511-rdskl4m7.png');"></i>
+                
+                <span class="sTxt">御姐女神</span>
+                </li>
+            
+        
+        </ul>
+        </div>
+        </div>
+        <!--一语音类型菜单 结束-->
+
+
+        <!-- 景点详情 -->
+        <div class="modal viweDetails scenic">
+            <div class="header">
+                <div class="go-to-here bindgo-to-here"></div>
+                <h3></h3>
+                <div class="close-btn close-icon"></div>
+            </div>
+            <div id="scenicContant" class="container loading">
+                <div class="content"></div>
+            </div>
+        </div>
+        <!-- 景点详情 结束 -->
+
+        <!-- 帮助详情 -->
+        <div class="modal viweDetails help ">
+            <div class="header">
+                <h3>帮助中心</h3>
+                <div class="close-btn close-icon"></div>
+            </div>
+            <div id="userHelpContant" class="container loading">
+                <div class="content"></div>
+            </div>
+        </div>
+
+        
+        <!-- 帮助详情结束 -->
+        <!--feedbacks-->
+        <div id='feedBackDom' class="modal feedbacks ">
+        <div class='header'>
+        <div class='back'></div>
+        <div class='title'>建议与反馈</div>
+        <div class="close-btn close-icon"></div>
+        </div>
+        <div class='feed-choose'>
+        <div class='feedback-tip' >使用中遇到问题？可尝试联系驴迹客服！</div>
+        <dl>
+        <dt error-text='地图问题'><span class='error map'></span> </dt>
+        <dt error-text='语音问题'><span class="audio_error error"></span></dt>
+        <dt error-text='功能问题'><span class="function_error error"></span></dt>
+        <dt error-text='其他'><span class="others_error error"></span></dt>
+        </dl>
+        <div class="feedback-foot">
+        <a class='feedBack-tle' href="tel:02029878842"></a>
+        </div>
+        </div>
+        <div class='inupt-div'>
+        <form action="#" id="backform">
+        <lable class='tel-number'>
+        <span>手机号：</span>
+        <input id="telNumber" name='telNumber' type="tel" placeholder='请输入您的手机号' autocomplete='off'>
+        </lable>
+        <lable class='textarea-lable'>
+        <span>描 &nbsp;&nbsp;述：</span>
+        <textarea class='textarea' placeholder='请写下您的宝贵建议，驴小迹一定会认真改进的呢“^_^”！'></textarea>
+        </lable>
+
+        <div class='submit-nav'><div class='submit disable'></div> </div>
+        </form>
+        <div class='error-tip'></div>
+        </div>
+        </div>
+        <!--feedbacks-->
+        <!-- 未授予地理位置的权限-->
+        <div class="reject-local-box modal ">
+        <div class="reject-header">温馨提示</div>
+        <div class="reject-content">您未授予地理位置的权限，我们无法为您开启自动导游及定位功能，请尝试使用其它浏览器打开或重新授予地理位置的权限。
+        <div class="leave close-icon"></div>
+        </div>
+        </div>
+        <!-- 未授予地理位置的权限-->
+
+        <div class="verify-wrap modal" >
+        <div class='close-btn close-icon'></div>
+        <dl>
+        <dt>授权激活</dt>
+        <dd class="dd-icon"></dd>
+        <dd class="dd-input"><textarea></textarea></dd>
+        <dd class="dd-txt">
+        <p class="input-null"><span class='error-icon'></span>授权码为空 <br>亲，请输入授权码或粘贴短信！</p>
+        <p class="input-error"><span class='error-icon'></span>授权码有误 <br>亲，请输入正确的授权码！</p>
+        <p class="ptxt1">亲，直接复制含有授权码的短信至授权码验证框内，驴小迹会为您自动识别噢！</p>
+        <p class="ptxt2"><span class='error-icon'></span>验证失败<br>授权码无效，请确认后重试！</p>
+        <p class="ptxt2-1"><span class='error-icon'></span>验证失败<br>授权码无效，请尝试手动输入！</p>
+        <p class="ptxt3"><span class='error-icon'></span>授权码已过期，请重新购买<br><span class='expire-tip'>有效时间：<span
+        class="s1"></span>-<span class="s2"><span></span></p>
+        </dd>
+        <dd class="success-tip">
+        亲爱的游客您好，北京动物园的智能导游服务已激活，有效期至<br>
+        <span class='date'></span>
+        </dd>
+        <!-- 如果是不显示立即购买按钮的情况，隐藏立即购买按钮，只显示立即激活按钮 -->
+        <dd class="dd-footer ">
+		<!-- 如果购买渠道开启则显示立即购买按钮 -->
+             
+        <a class="a-buy" href="/web/orderpreOrderDetail?scenicId=68&distributorId=12">立即购买</a>
+		
+        <a class="a-activate" href="javascript:void(0)">验证授权</a>
+        </dd>
+
+        <span class='understand'>知道了</span>
+        </dl>
+        </div>
+        <div class="modal scenic-intr ">
+        <span class="close-icon close-btn"></span>
+        <h3>北京动物园简介</h3>
+        <ul class="scenic-intr-info">
+        <li class="adress"><span>广州市白云区白云大道北山上<span></li>
+        <li class="open-time"><span>9:00-17:00 周一到周五<span></li>
+        </ul>
+        </div>
+        </div>
+        <div class="message doubletap-disable"></div>
+
+        <!--一modals结束 -->
+
+
+        <script type="text/javascript" src='js/jquery-1.7.2.min.js'></script>
+        <!-- 引用leaflet.js组件 -->
+        <script type="text/javascript" src="js/leaflet.1.1.0.min.js" ></script>
+
+        <!--地图操作及DOM操作-->
+        <script type="text/javascript" src='js/demo4.js'></script>
+
+
+        <script>
+        $(function(){
+        var c=commonMethod;
+        c.filePath="https://map.365daoyou.cn/cm/fileOpviewFile?fileName=";
+        c.path="";
+        c.singleAndroidAppLink="";
+        c.singleIosAppLink="";
+        c.singleLogo=c.path+'/cm/fileOpviewFile?fileName=mimi-001_1470382702978-mndhtxqj.png';
+
+        setDownloadUrl();//设置下载条的URL
+
+        c.isAuthUrl="/web/authCodevalidAuthCode?code=";
+        c.scenicId="68";
+        c.distributorId='12';
+        c.scenicName="北京动物园";
+        c.audioPath='https://file.365daoyou.cn/';
+        c.audioType = "";//音频类型;
+
+
+        
+            
+                c.needVerify=true;
+            
+            
+        
+       
+        c.mapData={
+        rightTop:[39.9461355534,116.3433300411],
+        leftBottom:[39.9380432729,116.3267646006],
+        zoom:7,
+        zoomRange:[17.5,19.0],
+        hideTitZoom:6,
+        groupMarkers:[],
+        markers:[],
+        serviceMarkers:[],
+        imageLayer:[],
+        tileSrc:[],
+        childGrounpMarker:[],
+        nearServices:[]
+
+        }
+
+        c.mapData.bounds= L.bounds([c.mapData.rightTop,c.mapData.leftBottom]);
+        c.mapData.center=[c.mapData.bounds.getCenter().x,c.mapData.bounds.getCenter().y];
+
+        var temporaryMarkerObj,nearSubMarker;
+        
+            temporaryMarkerObj={
+            serviceTypDefaultPicName: '/cm/fileOpviewFile?fileName=mimi-001_1515574934396-x7onbuyf.png',
+            serviceTypShowPicName: '/cm/fileOpviewFile?fileName=mimi-001_1515574934372-x22e1u4m.png',
+            serviceTypeName:'厕所',
+
+            };
+            temporaryMarkerObj.markers=[];
+            
+                nearSubMarker={
+                viweID: '35314',
+                viweName: '公共厕所',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716965181-eg5cq4sr.jpg'||'mimi-001_1515574934351-gxyo8wsy.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574934323-yx2iudw6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574934299-awas4ekx.png'
+                }
+                
+                    nearSubMarker.position = [39.943639,116.3295];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35315',
+                viweName: '公共厕所',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574934351-gxyo8wsy.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574934323-yx2iudw6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574934299-awas4ekx.png'
+                }
+                
+                    nearSubMarker.position = [39.945451,116.335127];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35316',
+                viweName: '公共厕所',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716965788-ksd5evmz.jpg'||'mimi-001_1515574934351-gxyo8wsy.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574934323-yx2iudw6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574934299-awas4ekx.png'
+                }
+                
+                    nearSubMarker.position = [39.94377,116.342302];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35317',
+                viweName: '公共厕所',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574934351-gxyo8wsy.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574934323-yx2iudw6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574934299-awas4ekx.png'
+                }
+                
+                    nearSubMarker.position = [39.94123,116.342223];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35318',
+                viweName: '公共厕所',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574934351-gxyo8wsy.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574934323-yx2iudw6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574934299-awas4ekx.png'
+                }
+                
+                    nearSubMarker.position = [39.943314,116.33474];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35319',
+                viweName: '公共厕所',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716966152-zcxadm52.jpg'||'mimi-001_1515574934351-gxyo8wsy.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574934323-yx2iudw6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574934299-awas4ekx.png'
+                }
+                
+                    nearSubMarker.position = [39.939632,116.337942];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35320',
+                viweName: '公共厕所',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716966549-4ttrdv3r.jpg'||'mimi-001_1515574934351-gxyo8wsy.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574934323-yx2iudw6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574934299-awas4ekx.png'
+                }
+                
+                    nearSubMarker.position = [39.944522,116.331882];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35321',
+                viweName: '公共厕所',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716967395-142kzy9s.jpg'||'mimi-001_1515574934351-gxyo8wsy.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574934323-yx2iudw6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574934299-awas4ekx.png'
+                }
+                
+                    nearSubMarker.position = [39.938111,116.330181];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35322',
+                viweName: '公共厕所',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574934351-gxyo8wsy.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574934323-yx2iudw6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574934299-awas4ekx.png'
+                }
+                
+                    nearSubMarker.position = [39.945908,116.331286];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35323',
+                viweName: '公共厕所',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716967931-r101vguv.jpg'||'mimi-001_1515574934351-gxyo8wsy.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574934323-yx2iudw6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574934299-awas4ekx.png'
+                }
+                
+                    nearSubMarker.position = [39.944621,116.337649];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35324',
+                viweName: '公共厕所',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716968313-1rkymuss.jpg'||'mimi-001_1515574934351-gxyo8wsy.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574934323-yx2iudw6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574934299-awas4ekx.png'
+                }
+                
+                    nearSubMarker.position = [39.942418,116.338996];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35325',
+                viweName: '公共厕所',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574934351-gxyo8wsy.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574934323-yx2iudw6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574934299-awas4ekx.png'
+                }
+                
+                    nearSubMarker.position = [39.939023,116.330039];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35327',
+                viweName: '公共厕所',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574934351-gxyo8wsy.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574934323-yx2iudw6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574934299-awas4ekx.png'
+                }
+                
+                    nearSubMarker.position = [39.941345,116.332009];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35328',
+                viweName: '公共厕所',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574934351-gxyo8wsy.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574934323-yx2iudw6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574934299-awas4ekx.png'
+                }
+                
+                    nearSubMarker.position = [39.93924,116.341174];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35329',
+                viweName: '公共厕所',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574934351-gxyo8wsy.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574934323-yx2iudw6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574934299-awas4ekx.png'
+                }
+                
+                    nearSubMarker.position = [39.940722,116.335584];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35330',
+                viweName: '公共厕所',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574934351-gxyo8wsy.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574934323-yx2iudw6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574934299-awas4ekx.png'
+                }
+                
+                    nearSubMarker.position = [39.9402,116.33381];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35326',
+                viweName: '五塔寺楼厕',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716968762-khtrh3wf.jpg'||'mimi-001_1515574934351-gxyo8wsy.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574934323-yx2iudw6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574934299-awas4ekx.png'
+                }
+                
+                    nearSubMarker.position = [39.944603,116.33188];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+            c.mapData.nearServices.push(temporaryMarkerObj);
+        
+            temporaryMarkerObj={
+            serviceTypDefaultPicName: '/cm/fileOpviewFile?fileName=mimi-001_1515574894512-61qhh86p.png',
+            serviceTypShowPicName: '/cm/fileOpviewFile?fileName=mimi-001_1515574894485-n4hqjpk0.png',
+            serviceTypeName:'出入口',
+
+            };
+            temporaryMarkerObj.markers=[];
+            
+                nearSubMarker={
+                viweID: '437',
+                viweName: '出入口',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498789340073-mmmdlkhh.jpg'||'mimi-001_1515574894447-jcptm9r5.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574894411-mlchw8hx.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574894388-pchsjcny.png'
+                }
+                
+                    nearSubMarker.position = [39.939172,116.339191];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35277',
+                viweName: '出入口',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574894447-jcptm9r5.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574894411-mlchw8hx.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574894388-pchsjcny.png'
+                }
+                
+                    nearSubMarker.position = [39.939009,116.330863];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35278',
+                viweName: '出入口',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716965809-b25gtdux.jpg'||'mimi-001_1515574894447-jcptm9r5.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574894411-mlchw8hx.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574894388-pchsjcny.png'
+                }
+                
+                    nearSubMarker.position = [39.938146,116.328613];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35279',
+                viweName: '出入口',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716966140-qiuwempl.jpg'||'mimi-001_1515574894447-jcptm9r5.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574894411-mlchw8hx.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574894388-pchsjcny.png'
+                }
+                
+                    nearSubMarker.position = [39.939526,116.339989];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35280',
+                viweName: '出入口',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574894447-jcptm9r5.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574894411-mlchw8hx.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574894388-pchsjcny.png'
+                }
+                
+                    nearSubMarker.position = [39.938662,116.338673];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35281',
+                viweName: '出入口',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574894447-jcptm9r5.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574894411-mlchw8hx.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574894388-pchsjcny.png'
+                }
+                
+                    nearSubMarker.position = [39.943515,116.330274];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35283',
+                viweName: '出入口',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574894447-jcptm9r5.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574894411-mlchw8hx.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574894388-pchsjcny.png'
+                }
+                
+                    nearSubMarker.position = [39.938588,116.33401];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35284',
+                viweName: '出入口',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574894447-jcptm9r5.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574894411-mlchw8hx.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574894388-pchsjcny.png'
+                }
+                
+                    nearSubMarker.position = [39.941085,116.328229];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35285',
+                viweName: '出入口',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716967080-0ft2v6ty.jpg'||'mimi-001_1515574894447-jcptm9r5.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574894411-mlchw8hx.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574894388-pchsjcny.png'
+                }
+                
+                    nearSubMarker.position = [39.943335,116.3297];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35286',
+                viweName: '出入口',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574894447-jcptm9r5.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574894411-mlchw8hx.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574894388-pchsjcny.png'
+                }
+                
+                    nearSubMarker.position = [39.93869,116.330441];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35287',
+                viweName: '出入口',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716967819-nsma7iyu.jpg'||'mimi-001_1515574894447-jcptm9r5.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574894411-mlchw8hx.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574894388-pchsjcny.png'
+                }
+                
+                    nearSubMarker.position = [39.938595,116.338898];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35288',
+                viweName: '出入口',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574894447-jcptm9r5.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574894411-mlchw8hx.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574894388-pchsjcny.png'
+                }
+                
+                    nearSubMarker.position = [39.938772,116.328993];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35289',
+                viweName: '出入口',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574894447-jcptm9r5.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574894411-mlchw8hx.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574894388-pchsjcny.png'
+                }
+                
+                    nearSubMarker.position = [39.938876,116.342691];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35290',
+                viweName: '出入口',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574894447-jcptm9r5.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574894411-mlchw8hx.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574894388-pchsjcny.png'
+                }
+                
+                    nearSubMarker.position = [39.939526,116.339989];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35291',
+                viweName: '出入口',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574894447-jcptm9r5.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574894411-mlchw8hx.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574894388-pchsjcny.png'
+                }
+                
+                    nearSubMarker.position = [39.942734,116.327741];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35293',
+                viweName: '出口',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716968411-t135kj6d.jpg'||'mimi-001_1515574894447-jcptm9r5.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574894411-mlchw8hx.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574894388-pchsjcny.png'
+                }
+                
+                    nearSubMarker.position = [39.939844,116.33025];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35282',
+                viweName: '进出口集团有限公司',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574894447-jcptm9r5.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574894411-mlchw8hx.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574894388-pchsjcny.png'
+                }
+                
+                    nearSubMarker.position = [39.939364,116.329717];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35274',
+                viweName: '西直门外大街西向',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574894447-jcptm9r5.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574894411-mlchw8hx.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574894388-pchsjcny.png'
+                }
+                
+                    nearSubMarker.position = [39.938542,116.330521];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35275',
+                viweName: '西直门外大街东向',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716965341-pf5ybjzs.jpg'||'mimi-001_1515574894447-jcptm9r5.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574894411-mlchw8hx.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574894388-pchsjcny.png'
+                }
+                
+                    nearSubMarker.position = [39.938149,116.332437];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35276',
+                viweName: '西直门外大街东向',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574894447-jcptm9r5.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574894411-mlchw8hx.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574894388-pchsjcny.png'
+                }
+                
+                    nearSubMarker.position = [39.938049,116.336907];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35292',
+                viweName: '西向',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574894447-jcptm9r5.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574894411-mlchw8hx.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574894388-pchsjcny.png'
+                }
+                
+                    nearSubMarker.position = [39.93827,116.335404];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+            c.mapData.nearServices.push(temporaryMarkerObj);
+        
+            temporaryMarkerObj={
+            serviceTypDefaultPicName: '/cm/fileOpviewFile?fileName=mimi-001_1515574875577-04907elq.png',
+            serviceTypShowPicName: '/cm/fileOpviewFile?fileName=mimi-001_1515574875555-fllipr6h.png',
+            serviceTypeName:'公交站',
+
+            };
+            temporaryMarkerObj.markers=[];
+            
+                nearSubMarker={
+                viweID: '35166',
+                viweName: '公交站',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574875532-55dhasvh.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574875509-uts8joht.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574875483-rxgre4c1.png'
+                }
+                
+                    nearSubMarker.position = [39.938641,116.329941];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+            c.mapData.nearServices.push(temporaryMarkerObj);
+        
+            temporaryMarkerObj={
+            serviceTypDefaultPicName: '/cm/fileOpviewFile?fileName=mimi-001_1515574839858-xjfv0ug6.png',
+            serviceTypShowPicName: '/cm/fileOpviewFile?fileName=mimi-001_1515574839838-fgrpvqgh.png',
+            serviceTypeName:'住宿',
+
+            };
+            temporaryMarkerObj.markers=[];
+            
+                nearSubMarker={
+                viweID: '35188',
+                viweName: '首体宾馆',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716965244-qrbcpvbh.jpg'||'mimi-001_1515574839815-sx93fx95.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574839794-zsr0ozg2.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574839765-hszw4ctn.png'
+                }
+                
+                    nearSubMarker.position = [39.941211,116.32794];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35189',
+                viweName: '永裕智辰商务酒店',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716965462-l3zm02sm.jpg'||'mimi-001_1515574839815-sx93fx95.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574839794-zsr0ozg2.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574839765-hszw4ctn.png'
+                }
+                
+                    nearSubMarker.position = [39.941149,116.327729];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+            c.mapData.nearServices.push(temporaryMarkerObj);
+        
+            temporaryMarkerObj={
+            serviceTypDefaultPicName: '/cm/fileOpviewFile?fileName=mimi-001_1515569529365-cdz4hiny.png',
+            serviceTypShowPicName: '/cm/fileOpviewFile?fileName=mimi-001_1515569529344-vt6r1tcs.png',
+            serviceTypeName:'停车场',
+
+            };
+            temporaryMarkerObj.markers=[];
+            
+                nearSubMarker={
+                viweID: '35366',
+                viweName: '北京动物园停车场',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515569529321-jgg96zsl.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515569529289-ytiuuba6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515569529271-77z75fww.png'
+                }
+                
+                    nearSubMarker.position = [39.938828,116.330559];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35356',
+                viweName: '出入口',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515569529321-jgg96zsl.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515569529289-ytiuuba6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515569529271-77z75fww.png'
+                }
+                
+                    nearSubMarker.position = [39.939009,116.330863];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35357',
+                viweName: '出入口',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515569529321-jgg96zsl.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515569529289-ytiuuba6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515569529271-77z75fww.png'
+                }
+                
+                    nearSubMarker.position = [39.943515,116.330274];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35370',
+                viweName: '出入口',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515569529321-jgg96zsl.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515569529289-ytiuuba6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515569529271-77z75fww.png'
+                }
+                
+                    nearSubMarker.position = [39.938588,116.33401];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35359',
+                viweName: '方圆大厦停车场',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515569529321-jgg96zsl.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515569529289-ytiuuba6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515569529271-77z75fww.png'
+                }
+                
+                    nearSubMarker.position = [39.938904,116.32975];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35364',
+                viweName: '方圆大厦停车场',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716969012-o38qogun.jpg'||'mimi-001_1515569529321-jgg96zsl.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515569529289-ytiuuba6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515569529271-77z75fww.png'
+                }
+                
+                    nearSubMarker.position = [39.939459,116.329649];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35369',
+                viweName: '方圆大厦北',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515569529321-jgg96zsl.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515569529289-ytiuuba6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515569529271-77z75fww.png'
+                }
+                
+                    nearSubMarker.position = [39.939842,116.330027];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35352',
+                viweName: '金地华著南',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515569529321-jgg96zsl.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515569529289-ytiuuba6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515569529271-77z75fww.png'
+                }
+                
+                    nearSubMarker.position = [39.945356,116.333417];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35361',
+                viweName: '凯旋大厦停车场',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716968078-2xmxfomk.jpg'||'mimi-001_1515569529321-jgg96zsl.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515569529289-ytiuuba6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515569529271-77z75fww.png'
+                }
+                
+                    nearSubMarker.position = [39.939527,116.333199];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35362',
+                viweName: '凯旋大厦停车场',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716968472-gsed0pft.jpg'||'mimi-001_1515569529321-jgg96zsl.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515569529289-ytiuuba6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515569529271-77z75fww.png'
+                }
+                
+                    nearSubMarker.position = [39.938861,116.33415];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35363',
+                viweName: '凯旋大厦停车场',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515569529321-jgg96zsl.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515569529289-ytiuuba6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515569529271-77z75fww.png'
+                }
+                
+                    nearSubMarker.position = [39.938667,116.333412];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35367',
+                viweName: '首体宾馆停车场',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515569529321-jgg96zsl.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515569529289-ytiuuba6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515569529271-77z75fww.png'
+                }
+                
+                    nearSubMarker.position = [39.941142,116.327913];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35351',
+                viweName: '天勤商务楼南',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716965275-vcpfdmu7.jpg'||'mimi-001_1515569529321-jgg96zsl.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515569529289-ytiuuba6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515569529271-77z75fww.png'
+                }
+                
+                    nearSubMarker.position = [39.944186,116.327743];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35360',
+                viweName: '腾达大厦停车场',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515569529321-jgg96zsl.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515569529289-ytiuuba6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515569529271-77z75fww.png'
+                }
+                
+                    nearSubMarker.position = [39.938105,116.327183];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35365',
+                viweName: '停车场',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515569529321-jgg96zsl.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515569529289-ytiuuba6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515569529271-77z75fww.png'
+                }
+                
+                    nearSubMarker.position = [39.943456,116.329675];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35353',
+                viweName: '五塔寺路',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515569529321-jgg96zsl.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515569529289-ytiuuba6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515569529271-77z75fww.png'
+                }
+                
+                    nearSubMarker.position = [39.943895,116.331365];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35354',
+                viweName: '五塔寺路',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515569529321-jgg96zsl.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515569529289-ytiuuba6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515569529271-77z75fww.png'
+                }
+                
+                    nearSubMarker.position = [39.942883,116.327434];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35355',
+                viweName: '西直门外大街辅路',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515569529321-jgg96zsl.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515569529289-ytiuuba6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515569529271-77z75fww.png'
+                }
+                
+                    nearSubMarker.position = [39.939339,116.33094];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35358',
+                viweName: '西直门外大街辅路',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716967529-tn11cqqf.jpg'||'mimi-001_1515569529321-jgg96zsl.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515569529289-ytiuuba6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515569529271-77z75fww.png'
+                }
+                
+                    nearSubMarker.position = [39.938196,116.329015];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35368',
+                viweName: '西直门外大街辅路',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716969683-anp5nl3o.jpg'||'mimi-001_1515569529321-jgg96zsl.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515569529289-ytiuuba6.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515569529271-77z75fww.png'
+                }
+                
+                    nearSubMarker.position = [39.938179,116.327955];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+            c.mapData.nearServices.push(temporaryMarkerObj);
+        
+            temporaryMarkerObj={
+            serviceTypDefaultPicName: '/cm/fileOpviewFile?fileName=mimi-001_1515574816129-mm7ew4gr.png',
+            serviceTypShowPicName: '/cm/fileOpviewFile?fileName=mimi-001_1515574816104-lntzsp6o.png',
+            serviceTypeName:'游客中心',
+
+            };
+            temporaryMarkerObj.markers=[];
+            
+                nearSubMarker={
+                viweID: '35187',
+                viweName: '西直门外大街辅路西',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716965249-ighoaugh.jpg'||'mimi-001_1515574816080-p7r2xnii.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574816052-3l4xl7m4.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574816019-rzhqt0n9.png'
+                }
+                
+                    nearSubMarker.position = [39.938675,116.339188];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+            c.mapData.nearServices.push(temporaryMarkerObj);
+        
+            temporaryMarkerObj={
+            serviceTypDefaultPicName: '/cm/fileOpviewFile?fileName=mimi-001_1515574796217-b1yrtagd.png',
+            serviceTypShowPicName: '/cm/fileOpviewFile?fileName=mimi-001_1515574796191-rals1mup.png',
+            serviceTypeName:'美食',
+
+            };
+            temporaryMarkerObj.markers=[];
+            
+                nearSubMarker={
+                viweID: '35371',
+                viweName: '白石桥店',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716965348-pefuixtr.jpg'||'mimi-001_1515574796170-i5zmsyhq.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574796143-9akaw99h.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574795764-vr7i4i05.png'
+                }
+                
+                    nearSubMarker.position = [39.939045,116.330231];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35372',
+                viweName: '白石桥店',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716965803-glsywk0j.jpg'||'mimi-001_1515574796170-i5zmsyhq.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574796143-9akaw99h.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574795764-vr7i4i05.png'
+                }
+                
+                    nearSubMarker.position = [39.938667,116.331407];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35375',
+                viweName: '白石桥店',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716966777-qjjulv1f.jpg'||'mimi-001_1515574796170-i5zmsyhq.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574796143-9akaw99h.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574795764-vr7i4i05.png'
+                }
+                
+                    nearSubMarker.position = [39.939106,116.329615];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35381',
+                viweName: '北京黎晖餐饮管理有限公司',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574796170-i5zmsyhq.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574796143-9akaw99h.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574795764-vr7i4i05.png'
+                }
+                
+                    nearSubMarker.position = [39.939523,116.329466];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35382',
+                viweName: '北京抚河水乡餐饮管理有限公司',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574796170-i5zmsyhq.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574796143-9akaw99h.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574795764-vr7i4i05.png'
+                }
+                
+                    nearSubMarker.position = [39.938686,116.331567];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35388',
+                viweName: '白石桥店',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716970312-kr6ufzoc.jpg'||'mimi-001_1515574796170-i5zmsyhq.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574796143-9akaw99h.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574795764-vr7i4i05.png'
+                }
+                
+                    nearSubMarker.position = [39.938677,116.331297];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35374',
+                viweName: '东方宫京城第一羯',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716966549-cefifykk.jpg'||'mimi-001_1515574796170-i5zmsyhq.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574796143-9akaw99h.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574795764-vr7i4i05.png'
+                }
+                
+                    nearSubMarker.position = [39.93878,116.334299];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35379',
+                viweName: '动物园店',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716968372-jugjsx4s.jpg'||'mimi-001_1515574796170-i5zmsyhq.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574796143-9akaw99h.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574795764-vr7i4i05.png'
+                }
+                
+                    nearSubMarker.position = [39.938471,116.334427];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35380',
+                viweName: '动物园店',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716968702-5asgued0.jpg'||'mimi-001_1515574796170-i5zmsyhq.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574796143-9akaw99h.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574795764-vr7i4i05.png'
+                }
+                
+                    nearSubMarker.position = [39.938606,116.334272];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35385',
+                viweName: '动物园店',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716969305-a2qr5iqk.jpg'||'mimi-001_1515574796170-i5zmsyhq.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574796143-9akaw99h.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574795764-vr7i4i05.png'
+                }
+                
+                    nearSubMarker.position = [39.939099,116.334276];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35387',
+                viweName: '动物园店',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716970044-wkjkj8ra.jpg'||'mimi-001_1515574796170-i5zmsyhq.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574796143-9akaw99h.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574795764-vr7i4i05.png'
+                }
+                
+                    nearSubMarker.position = [39.938661,116.331575];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35390',
+                viweName: '动物园直营店',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716970613-k1sias17.jpg'||'mimi-001_1515574796170-i5zmsyhq.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574796143-9akaw99h.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574795764-vr7i4i05.png'
+                }
+                
+                    nearSubMarker.position = [39.938628,116.334278];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35378',
+                viweName: '京粹轩',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716967983-gvbbslmi.jpg'||'mimi-001_1515574796170-i5zmsyhq.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574796143-9akaw99h.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574795764-vr7i4i05.png'
+                }
+                
+                    nearSubMarker.position = [39.938965,116.33426];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35384',
+                viweName: '京城第一蝎',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716969157-ggedzdz3.jpg'||'mimi-001_1515574796170-i5zmsyhq.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574796143-9akaw99h.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574795764-vr7i4i05.png'
+                }
+                
+                    nearSubMarker.position = [39.938548,116.334548];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35376',
+                viweName: '老韩家郑州羊肉烩面',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716967119-exh7gr8h.jpg'||'mimi-001_1515574796170-i5zmsyhq.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574796143-9akaw99h.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574795764-vr7i4i05.png'
+                }
+                
+                    nearSubMarker.position = [39.93874,116.331643];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35377',
+                viweName: '腾达大厦店',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716967498-nov5xfss.jpg'||'mimi-001_1515574796170-i5zmsyhq.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574796143-9akaw99h.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574795764-vr7i4i05.png'
+                }
+                
+                    nearSubMarker.position = [39.938159,116.326917];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35373',
+                viweName: '西直门外大街店',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716966105-s8lnx2tu.jpg'||'mimi-001_1515574796170-i5zmsyhq.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574796143-9akaw99h.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574795764-vr7i4i05.png'
+                }
+                
+                    nearSubMarker.position = [39.938788,116.341715];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35386',
+                viweName: '西直门外大街店',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716969905-qmab0m74.jpg'||'mimi-001_1515574796170-i5zmsyhq.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574796143-9akaw99h.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574795764-vr7i4i05.png'
+                }
+                
+                    nearSubMarker.position = [39.938663,116.331466];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35389',
+                viweName: '营养酸菜餐厅',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+(''||'mimi-001_1515574796170-i5zmsyhq.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574796143-9akaw99h.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574795764-vr7i4i05.png'
+                }
+                
+                    nearSubMarker.position = [39.938741,116.331644];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+                nearSubMarker={
+                viweID: '35383',
+                viweName: '中关村南大街店',
+                viweType:'near',
+                viweImgUrl: '/cm/fileOpviewFile?fileName='+('mimi-001_1498716969022-rwtyab3d.jpg'||'mimi-001_1515574796170-i5zmsyhq.png'),
+                serviceTypPicName:'/cm/fileOpviewFile?fileName=mimi-001_1515574796143-9akaw99h.png',
+                icon:'/cm/fileOpviewFile?fileName=mimi-001_1515574795764-vr7i4i05.png'
+                }
+                
+                    nearSubMarker.position = [39.938668,116.331397];
+                    temporaryMarkerObj.markers.push(nearSubMarker);
+                
+            
+            c.mapData.nearServices.push(temporaryMarkerObj);
+        
+
+        
+
+            
+                // 一般景点marker
+                temporaryMarkerObj={
+                viweID: '5022',
+                viweName: '澳洲动物展区',
+                viweType:'scenic',
+                viweImgUrl: '/cm/fileOpviewFile?fileName=mimi-001_1459435180899-z86haso1.jpg',
+                introduction: '亲爱的，澳洲动物区位于豳风堂以北，长河南岸，展示的是大洋洲的动物。......',
+                detailsURL: '/web/subScenicshowSubScenicDetail?id=5022'
+                };
+                
+                    
+                        // !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={});
+                       !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={})
+                        temporaryMarkerObj.audioUrl['audioId1-2']=
+                        c.audioPath+'mimi-001_1420528436347-j13j1beu';
+                    
+                
+
+                
+
+                
+                    temporaryMarkerObj.area=[
+                    [39.942619,116.337193],
+                    [39.942611,116.337697],
+                    [39.942331,116.337697],
+                    [39.942307,116.337193]
+                    ];
+                
+                
+                    temporaryMarkerObj.position = [39.94243,116.337461];
+                    c.mapData.markers.push(temporaryMarkerObj);
+                
+            
+
+
+            
+
+        
+
+            
+                // 一般景点marker
+                temporaryMarkerObj={
+                viweID: '5029',
+                viweName: '北京海洋馆',
+                viweType:'scenic',
+                viweImgUrl: '/cm/fileOpviewFile?fileName=mimi-001_1459435181907-algxwamd.jpg',
+                introduction: '亲爱的，北京海洋馆位于北京动物园内长河北岸，占地12万平方米，建筑......',
+                detailsURL: '/web/subScenicshowSubScenicDetail?id=5029'
+                };
+                
+                    
+                        // !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={});
+                       !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={})
+                        temporaryMarkerObj.audioUrl['audioId1-2']=
+                        c.audioPath+'mimi-001_1420528153444-nsp3olxj';
+                    
+                
+
+                
+
+                
+                    temporaryMarkerObj.area=[
+                    [39.944585,116.33994],
+                    [39.944577,116.341217],
+                    [39.943804,116.341217],
+                    [39.943804,116.339973]
+                    ];
+                
+                
+                    temporaryMarkerObj.position = [39.944199,116.340584];
+                    c.mapData.markers.push(temporaryMarkerObj);
+                
+            
+
+
+            
+
+        
+
+            
+                // 一般景点marker
+                temporaryMarkerObj={
+                viweID: '5027',
+                viweName: '大门',
+                viweType:'scenic',
+                viweImgUrl: '/cm/fileOpviewFile?fileName=mimi-001_1459435181629-u0gbt2p0.jpg',
+                introduction: '亲爱的，我们就要进入动物园了哦，是不是想想都觉得很兴奋呢？北京动物......',
+                detailsURL: '/web/subScenicshowSubScenicDetail?id=5027'
+                };
+                
+                    
+                        // !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={});
+                       !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={})
+                        temporaryMarkerObj.audioUrl['audioId1-2']=
+                        c.audioPath+'mimi-001_1459547279838-jqggunrw';
+                    
+                
+
+                
+
+                
+                    temporaryMarkerObj.area=[
+                    [39.939041,116.339393],
+                    [39.939058,116.339758],
+                    [39.938827,116.339747],
+                    [39.938844,116.339393]
+                    ];
+                
+                
+                    temporaryMarkerObj.position = [39.938909,116.339597];
+                    c.mapData.markers.push(temporaryMarkerObj);
+                
+            
+
+
+            
+
+        
+
+            
+                // 一般景点marker
+                temporaryMarkerObj={
+                viweID: '5025',
+                viweName: '大熊猫馆',
+                viweType:'scenic',
+                viweImgUrl: '/cm/fileOpviewFile?fileName=mimi-001_1459435181312-z478vjo8.jpg',
+                introduction: '亲爱的，现在，我们来到的是北京动物园熊猫馆，没错，是可爱的熊猫哟！......',
+                detailsURL: '/web/subScenicshowSubScenicDetail?id=5025'
+                };
+                
+                    
+                        // !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={});
+                       !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={})
+                        temporaryMarkerObj.audioUrl['audioId1-2']=
+                        c.audioPath+'mimi-001_1420528311747-4viiv809';
+                    
+                
+
+                
+
+                
+                    temporaryMarkerObj.area=[
+                    [39.94016,116.339178],
+                    [39.94016,116.3398],
+                    [39.9396,116.3398],
+                    [39.939633,116.339189]
+                    ];
+                
+                
+                    temporaryMarkerObj.position = [39.939888,116.339457];
+                    c.mapData.markers.push(temporaryMarkerObj);
+                
+            
+
+
+            
+
+        
+
+            
+                // 一般景点marker
+                temporaryMarkerObj={
+                viweID: '5030',
+                viweName: '儿童动物园',
+                viweType:'scenic',
+                viweImgUrl: '/cm/fileOpviewFile?fileName=mimi-001_1459435182123-ypfvnwrh.png',
+                introduction: '亲爱的宝贝，接下来咱们要去的这个儿童动物园可是深受小朋友们欢迎的哦......',
+                detailsURL: '/web/subScenicshowSubScenicDetail?id=5030'
+                };
+                
+                    
+                        // !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={});
+                       !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={})
+                        temporaryMarkerObj.audioUrl['audioId1-2']=
+                        c.audioPath+'mimi-001_1420528131996-yjlthlnx';
+                    
+                
+
+                
+
+                
+                    temporaryMarkerObj.area=[
+                    [39.93951,116.332386],
+                    [39.93951,116.333647],
+                    [39.938856,116.333631],
+                    [39.938852,116.332376]
+                    ];
+                
+                
+                    temporaryMarkerObj.position = [39.939123,116.332987];
+                    c.mapData.markers.push(temporaryMarkerObj);
+                
+            
+
+
+            
+
+        
+
+            
+                // 一般景点marker
+                temporaryMarkerObj={
+                viweID: '5014',
+                viweName: '非洲动物区',
+                viweType:'scenic',
+                viweImgUrl: '/cm/fileOpviewFile?fileName=mimi-001_1459435179452-t3ta8406.jpg',
+                introduction: '亲爱的，非洲动物区位于科普馆北，原址为绿化树林。于2000年代开放......',
+                detailsURL: '/web/subScenicshowSubScenicDetail?id=5014'
+                };
+                
+                    
+                        // !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={});
+                       !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={})
+                        temporaryMarkerObj.audioUrl['audioId1-2']=
+                        c.audioPath+'mimi-001_1420528717265-om99415w';
+                    
+                
+
+                
+
+                
+                    temporaryMarkerObj.area=[
+                    [39.943113,116.334791],
+                    [39.943113,116.335617],
+                    [39.942619,116.335617],
+                    [39.942628,116.334769]
+                    ];
+                
+                
+                    temporaryMarkerObj.position = [39.942825,116.33523];
+                    c.mapData.markers.push(temporaryMarkerObj);
+                
+            
+
+
+            
+
+        
+
+            
+                // 一般景点marker
+                temporaryMarkerObj={
+                viweID: '5028',
+                viweName: '猴山',
+                viweType:'scenic',
+                viweImgUrl: '/cm/fileOpviewFile?fileName=mimi-001_1459435181756-3uiiw3se.jpg',
+                introduction: '亲爱的宝贝，说到猴山，可谓是无人不知无人不晓。作为北京动物园的地标......',
+                detailsURL: '/web/subScenicshowSubScenicDetail?id=5028'
+                };
+                
+                    
+                        // !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={});
+                       !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={})
+                        temporaryMarkerObj.audioUrl['audioId1-2']=
+                        c.audioPath+'mimi-001_1420528238765-uq5jo4vk';
+                    
+                
+
+                
+
+                
+                    temporaryMarkerObj.area=[
+                    [39.93951,116.341292],
+                    [39.939502,116.341668],
+                    [39.939206,116.341657],
+                    [39.939214,116.341303]
+                    ];
+                
+                
+                    temporaryMarkerObj.position = [39.939354,116.341475];
+                    c.mapData.markers.push(temporaryMarkerObj);
+                
+            
+
+
+            
+
+        
+
+            
+                // 一般景点marker
+                temporaryMarkerObj={
+                viweID: '5021',
+                viweName: '荟芳轩',
+                viweType:'scenic',
+                viweImgUrl: '/cm/fileOpviewFile?fileName=mimi-001_1459435180734-23htxqah.jpg',
+                introduction: '嘿，亲爱的，现在咱们来到了荟芳轩，她始建于1908年，是一座中式的......',
+                detailsURL: '/web/subScenicshowSubScenicDetail?id=5021'
+                };
+                
+                    
+                        // !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={});
+                       !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={})
+                        temporaryMarkerObj.audioUrl['audioId1-2']=
+                        c.audioPath+'mimi-001_1420528457426-nyif9esb';
+                    
+                
+
+                
+
+                
+                    temporaryMarkerObj.area=[
+                    [39.940793,116.338519],
+                    [39.940797,116.339066],
+                    [39.940493,116.339066],
+                    [39.940493,116.338519]
+                    ];
+                
+                
+                    temporaryMarkerObj.position = [39.940637,116.338819];
+                    c.mapData.markers.push(temporaryMarkerObj);
+                
+            
+
+
+            
+
+        
+
+            
+                // 一般景点marker
+                temporaryMarkerObj={
+                viweID: '5020',
+                viweName: '火烈鸟馆',
+                viweType:'scenic',
+                viweImgUrl: '/cm/fileOpviewFile?fileName=mimi-001_1459435180590-hty89gw4.jpg',
+                introduction: '亲爱的，现在我们来到了鸟苑的南边，展现我们面前的就是火烈鸟馆了！火......',
+                detailsURL: '/web/subScenicshowSubScenicDetail?id=5020'
+                };
+                
+                    
+                        // !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={});
+                       !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={})
+                        temporaryMarkerObj.audioUrl['audioId1-2']=
+                        c.audioPath+'mimi-001_1420528526941-a0vigqfu';
+                    
+                
+
+                
+
+                
+                    temporaryMarkerObj.area=[
+                    [39.940749,116.335599],
+                    [39.940733,116.336114],
+                    [39.94042,116.336104],
+                    [39.940404,116.33561]
+                    ];
+                
+                
+                    temporaryMarkerObj.position = [39.94056,116.335889];
+                    c.mapData.markers.push(temporaryMarkerObj);
+                
+            
+
+
+            
+
+        
+
+            
+                // 一般景点marker
+                temporaryMarkerObj={
+                viweID: '5016',
+                viweName: '科普馆',
+                viweType:'scenic',
+                viweImgUrl: '/cm/fileOpviewFile?fileName=mimi-001_1459435179809-s7lihv3m.jpg',
+                introduction: '亲爱的，接下来咱们一起去科普馆看看吧，这里是一个很有教育意义的地方......',
+                detailsURL: '/web/subScenicshowSubScenicDetail?id=5016'
+                };
+                
+                    
+                        // !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={});
+                       !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={})
+                        temporaryMarkerObj.audioUrl['audioId1-2']=
+                        c.audioPath+'mimi-001_1420528657120-cidhifm5';
+                    
+                
+
+                
+
+                
+                    temporaryMarkerObj.area=[
+                    [39.942582,116.334876],
+                    [39.942582,116.336073],
+                    [39.942023,116.336073],
+                    [39.942023,116.334876]
+                    ];
+                
+                
+                    temporaryMarkerObj.position = [39.942294,116.33552];
+                    c.mapData.markers.push(temporaryMarkerObj);
+                
+            
+
+
+            
+
+        
+
+            
+                // 一般景点marker
+                temporaryMarkerObj={
+                viweID: '5011',
+                viweName: '两栖爬行动物馆',
+                viweType:'scenic',
+                viweImgUrl: '/cm/fileOpviewFile?fileName=mimi-001_1459435178968-dq3po51n.jpg',
+                introduction: '亲爱的，现在我们来到了动物园西南部，看到紧邻鬯（chàng）春堂的......',
+                detailsURL: '/web/subScenicshowSubScenicDetail?id=5011'
+                };
+                
+                    
+                        // !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={});
+                       !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={})
+                        temporaryMarkerObj.audioUrl['audioId1-2']=
+                        c.audioPath+'mimi-001_1420528789369-ahkerqa2';
+                    
+                
+
+                
+
+                
+                    temporaryMarkerObj.area=[
+                    [39.940226,116.333089],
+                    [39.940209,116.333808],
+                    [39.939855,116.333798],
+                    [39.939847,116.333089]
+                    ];
+                
+                
+                    temporaryMarkerObj.position = [39.940012,116.333454];
+                    c.mapData.markers.push(temporaryMarkerObj);
+                
+            
+
+
+            
+
+        
+
+            
+                // 一般景点marker
+                temporaryMarkerObj={
+                viweID: '5018',
+                viweName: '貘馆',
+                viweType:'scenic',
+                viweImgUrl: '/cm/fileOpviewFile?fileName=mimi-001_1459435180277-5u39nh65.png',
+                introduction: '亲爱的，现在我们在水禽湖的北方，展示在我们面前的就是貘馆了，貘在动......',
+                detailsURL: '/web/subScenicshowSubScenicDetail?id=5018'
+                };
+                
+                    
+                        // !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={});
+                       !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={})
+                        temporaryMarkerObj.audioUrl['audioId1-2']=
+                        c.audioPath+'mimi-001_1420528608039-qn71co0d';
+                    
+                
+
+                
+
+                
+                    temporaryMarkerObj.area=[
+                    [39.941657,116.336483],
+                    [39.941653,116.33695],
+                    [39.941291,116.336944],
+                    [39.941283,116.336494]
+                    ];
+                
+                
+                    temporaryMarkerObj.position = [39.941451,116.336724];
+                    c.mapData.markers.push(temporaryMarkerObj);
+                
+            
+
+
+            
+
+        
+
+            
+                // 一般景点marker
+                temporaryMarkerObj={
+                viweID: '5017',
+                viweName: '鸟苑',
+                viweType:'scenic',
+                viweImgUrl: '/cm/fileOpviewFile?fileName=mimi-001_1459435180063-o008cc7j.png',
+                introduction: '亲爱的，鸟苑建筑风格非常特别，就像一只展翅飞翔的大鸟。在鸟苑生态馆......',
+                detailsURL: '/web/subScenicshowSubScenicDetail?id=5017'
+                };
+                
+                    
+                        // !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={});
+                       !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={})
+                        temporaryMarkerObj.audioUrl['audioId1-2']=
+                        c.audioPath+'mimi-001_1420528629074-hwdswevk';
+                    
+                
+
+                
+
+                
+                    temporaryMarkerObj.area=[
+                    [39.941501,116.335434],
+                    [39.941501,116.33581],
+                    [39.941114,116.335799],
+                    [39.941114,116.335413]
+                    ];
+                
+                
+                    temporaryMarkerObj.position = [39.941311,116.335563];
+                    c.mapData.markers.push(temporaryMarkerObj);
+                
+            
+
+
+            
+
+        
+
+            
+                // 一般景点marker
+                temporaryMarkerObj={
+                viweID: '5010',
+                viweName: '企鹅馆',
+                viweType:'scenic',
+                viweImgUrl: '/cm/fileOpviewFile?fileName=mimi-001_1459435178826-15wmiqz6.jpg',
+                introduction: '亲爱的，现在我们处在动物园的西南端，可以看到企鹅馆哦！不过在这里还......',
+                detailsURL: '/web/subScenicshowSubScenicDetail?id=5010'
+                };
+                
+                    
+                        // !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={});
+                       !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={})
+                        temporaryMarkerObj.audioUrl['audioId1-2']=
+                        c.audioPath+'mimi-001_1420528829220-r0v7ekvj';
+                    
+                
+
+                
+
+                
+                    temporaryMarkerObj.area=[
+                    [39.940759,116.331663],
+                    [39.940738,116.332237],
+                    [39.940294,116.332232],
+                    [39.94029,116.331663]
+                    ];
+                
+                
+                    temporaryMarkerObj.position = [39.940537,116.331942];
+                    c.mapData.markers.push(temporaryMarkerObj);
+                
+            
+
+
+            
+
+        
+
+            
+                // 一般景点marker
+                temporaryMarkerObj={
+                viweID: '6351',
+                viweName: '热带小型猴馆',
+                viweType:'scenic',
+                viweImgUrl: '/cm/fileOpviewFile?fileName=mimi-001_1459435330613-dbi7g2ol.jpg',
+                introduction: '宝贝，现在我们来到的是热带小型猴馆，它的总建筑面积是344平方米，......',
+                detailsURL: '/web/subScenicshowSubScenicDetail?id=6351'
+                };
+                
+                    
+                        // !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={});
+                       !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={})
+                        temporaryMarkerObj.audioUrl['audioId1-2']=
+                        c.audioPath+'mimi-001_1422697873328-1zapa658';
+                    
+                
+
+                
+
+                
+                    temporaryMarkerObj.area=[
+                    [39.941324,116.333144],
+                    [39.941332,116.333723],
+                    [39.941061,116.333691],
+                    [39.941061,116.333144]
+                    ];
+                
+                
+                    temporaryMarkerObj.position = [39.941176,116.333423];
+                    c.mapData.markers.push(temporaryMarkerObj);
+                
+            
+
+
+            
+
+        
+
+            
+                // 一般景点marker
+                temporaryMarkerObj={
+                viweID: '5023',
+                viweName: '狮虎山',
+                viweType:'scenic',
+                viweImgUrl: '/cm/fileOpviewFile?fileName=mimi-001_1459435181022-pqacjj93.jpg',
+                introduction: '亲爱的，狮虎山建于1956年，处在公园的东部，建筑最高点有14.2......',
+                detailsURL: '/web/subScenicshowSubScenicDetail?id=5023'
+                };
+                
+                    
+                        // !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={});
+                       !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={})
+                        temporaryMarkerObj.audioUrl['audioId1-2']=
+                        c.audioPath+'mimi-001_1420528391179-rufd8ym4';
+                    
+                
+
+                
+
+                
+                    temporaryMarkerObj.area=[
+                    [39.942192,116.33979],
+                    [39.9422,116.340316],
+                    [39.941657,116.340337],
+                    [39.941657,116.339812]
+                    ];
+                
+                
+                    temporaryMarkerObj.position = [39.941871,116.34008];
+                    c.mapData.markers.push(temporaryMarkerObj);
+                
+            
+
+
+            
+
+        
+
+            
+                // 一般景点marker
+                temporaryMarkerObj={
+                viweID: '5019',
+                viweName: '水禽湖',
+                viweType:'scenic',
+                viweImgUrl: '/cm/fileOpviewFile?fileName=mimi-001_1459435180476-q6ifjyjj.jpg',
+                introduction: '亲爱的宝贝，在您面前的这片辽阔水域就是北京城里少有的，而且是非常适......',
+                detailsURL: '/web/subScenicshowSubScenicDetail?id=5019'
+                };
+                
+                    
+                        // !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={});
+                       !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={})
+                        temporaryMarkerObj.audioUrl['audioId1-2']=
+                        c.audioPath+'mimi-001_1420528561458-8di9rwbl';
+                    
+                
+
+                
+
+                
+                    temporaryMarkerObj.area=[
+                    [39.940324,116.337054],
+                    [39.940316,116.337999],
+                    [39.939806,116.337999],
+                    [39.939798,116.337108]
+                    ];
+                
+                
+                    temporaryMarkerObj.position = [39.940078,116.337484];
+                    c.mapData.markers.push(temporaryMarkerObj);
+                
+            
+
+
+            
+
+        
+
+            
+                // 一般景点marker
+                temporaryMarkerObj={
+                viweID: '5024',
+                viweName: '象馆',
+                viweType:'scenic',
+                viweImgUrl: '/cm/fileOpviewFile?fileName=mimi-001_1459435181186-z8mjtmtw.jpg',
+                introduction: '亲爱的，现在我们来到的可是北京动物园大象馆哦！一提到大象我们马上就......',
+                detailsURL: '/web/subScenicshowSubScenicDetail?id=5024'
+                };
+                
+                    
+                        // !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={});
+                       !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={})
+                        temporaryMarkerObj.audioUrl['audioId1-2']=
+                        c.audioPath+'mimi-001_1420528360140-802d5l38';
+                    
+                
+
+                
+
+                
+                    temporaryMarkerObj.area=[
+                    [39.943944,116.338481],
+                    [39.943935,116.339265],
+                    [39.943491,116.339243],
+                    [39.943491,116.338513]
+                    ];
+                
+                
+                    temporaryMarkerObj.position = [39.943689,116.33891];
+                    c.mapData.markers.push(temporaryMarkerObj);
+                
+            
+
+
+            
+
+        
+
+            
+                // 一般景点marker
+                temporaryMarkerObj={
+                viweID: '5015',
+                viweName: '犀牛河马馆',
+                viweType:'scenic',
+                viweImgUrl: '/cm/fileOpviewFile?fileName=mimi-001_1459435179627-jddbmdzm.jpg',
+                introduction: '亲爱的，北京动物园犀牛馆、河马馆都是五十年代的建筑，馆舍小，封闭较......',
+                detailsURL: '/web/subScenicshowSubScenicDetail?id=5015'
+                };
+                
+                    
+                        // !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={});
+                       !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={})
+                        temporaryMarkerObj.audioUrl['audioId1-2']=
+                        c.audioPath+'mimi-001_1420528682378-q66vzbnp';
+                    
+                
+
+                
+
+                
+                    temporaryMarkerObj.area=[
+                    [39.944421,116.336529],
+                    [39.944421,116.337709],
+                    [39.943796,116.33773],
+                    [39.943787,116.336518]
+                    ];
+                
+                
+                    temporaryMarkerObj.position = [39.944084,116.337162];
+                    c.mapData.markers.push(temporaryMarkerObj);
+                
+            
+
+
+            
+
+        
+
+            
+                // 一般景点marker
+                temporaryMarkerObj={
+                viweID: '5012',
+                viweName: '猩猩馆',
+                viweType:'scenic',
+                viweImgUrl: '/cm/fileOpviewFile?fileName=mimi-001_1459435179095-hnjn9dew.jpg',
+                introduction: '亲爱的，不知道你有没有看过电影《金刚》呢，里面的猩猩金刚可真是聪明......',
+                detailsURL: '/web/subScenicshowSubScenicDetail?id=5012'
+                };
+                
+                    
+                        // !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={});
+                       !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={})
+                        temporaryMarkerObj.audioUrl['audioId1-2']=
+                        c.audioPath+'mimi-001_1420528755281-xcmsl42a';
+                    
+                
+
+                
+
+                
+                    temporaryMarkerObj.area=[
+                    [39.942019,116.332752],
+                    [39.942002,116.333374],
+                    [39.941599,116.333364],
+                    [39.941599,116.332752]
+                    ];
+                
+                
+                    temporaryMarkerObj.position = [39.94178,116.333063];
+                    c.mapData.markers.push(temporaryMarkerObj);
+                
+            
+
+
+            
+
+        
+
+            
+                // 一般景点marker
+                temporaryMarkerObj={
+                viweID: '5026',
+                viweName: '雉鸡苑',
+                viweType:'scenic',
+                viweImgUrl: '/cm/fileOpviewFile?fileName=mimi-001_1459435181444-gqjwzl74.jpg',
+                introduction: '亲爱的，我们来到展出大鸨、白鹇、白冠长尾雉、红腹锦鸡、白腹锦鸡等的......',
+                detailsURL: '/web/subScenicshowSubScenicDetail?id=5026'
+                };
+                
+                    
+                        // !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={});
+                       !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={})
+                        temporaryMarkerObj.audioUrl['audioId1-2']=
+                        c.audioPath+'mimi-001_1420528283309-hpnry5iy';
+                    
+                
+
+                
+
+                
+                    temporaryMarkerObj.area=[
+                    [39.939958,116.340777],
+                    [39.939942,116.341233],
+                    [39.939617,116.341244],
+                    [39.939617,116.340761]
+                    ];
+                
+                
+                    temporaryMarkerObj.position = [39.939765,116.341035];
+                    c.mapData.markers.push(temporaryMarkerObj);
+                
+            
+
+
+            
+
+        
+
+            
+                // 一般景点marker
+                temporaryMarkerObj={
+                viweID: '5013',
+                viweName: '长颈鹿馆',
+                viweType:'scenic',
+                viweImgUrl: '/cm/fileOpviewFile?fileName=mimi-001_1459435179245-o73bm7qi.jpg',
+                introduction: '亲爱的，我们现在处在科普馆的西边，这里是长颈鹿馆，可以看到高高的长......',
+                detailsURL: '/web/subScenicshowSubScenicDetail?id=5013'
+                };
+                
+                    
+                        // !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={});
+                       !temporaryMarkerObj.audioUrl&&(temporaryMarkerObj.audioUrl={})
+                        temporaryMarkerObj.audioUrl['audioId1-2']=
+                        c.audioPath+'mimi-001_1420528737479-ccz30pvc';
+                    
+                
+
+                
+
+                
+                    temporaryMarkerObj.area=[
+                    [39.9428,116.333589],
+                    [39.942792,116.334415],
+                    [39.94243,116.334426],
+                    [39.942405,116.333589]
+                    ];
+                
+                
+                    temporaryMarkerObj.position = [39.942611,116.333954];
+                    c.mapData.markers.push(temporaryMarkerObj);
+                
+            
+
+
+            
+
+        
+
+        //添加图层数据
+            
+                c.mapData.imageLayer.push({'imageUrl':'https://map.365daoyou.cn/cm/fileOpviewFile?fileName=mimi-001_1498790260055-h4pnzjof.jpg','imageBounds':[
+                [39.9380432729,116.3267646006],
+                [39.9461355534,116.3433300411]
+                ]
+                });
+            
+            
+        
+        var subMarker;
+        
+
+
+        var lineTrack = {};
+
+        
+            lineTrack['全景游']=[];
+
+            
+                lineTrack['全景游'].push({'position': '116.33956,39.938805', 'mark': '1'});
+            
+                lineTrack['全景游'].push({'position': '116.33996,39.93928', 'mark': '2'});
+            
+                lineTrack['全景游'].push({'position': '116.34002,39.939644', 'mark': '1'});
+            
+                lineTrack['全景游'].push({'position': '116.339874,39.939846', 'mark': '2'});
+            
+                lineTrack['全景游'].push({'position': '116.33961,39.940315', 'mark': '2'});
+            
+                lineTrack['全景游'].push({'position': '116.34034,39.940216', 'mark': '1'});
+            
+                lineTrack['全景游'].push({'position': '116.34088,39.940334', 'mark': '2'});
+            
+                lineTrack['全景游'].push({'position': '116.34113,39.940662', 'mark': '1'});
+            
+                lineTrack['全景游'].push({'position': '116.34159,39.94081', 'mark': '2'});
+            
+                lineTrack['全景游'].push({'position': '116.341934,39.941418', 'mark': '2'});
+            
+                lineTrack['全景游'].push({'position': '116.34198,39.94196', 'mark': '1'});
+            
+                lineTrack['全景游'].push({'position': '116.34138,39.94196', 'mark': '2'});
+            
+                lineTrack['全景游'].push({'position': '116.34074,39.94215', 'mark': '2'});
+            
+                lineTrack['全景游'].push({'position': '116.34037,39.9423', 'mark': '2'});
+            
+                lineTrack['全景游'].push({'position': '116.3401,39.942455', 'mark': '1'});
+            
+                lineTrack['全景游'].push({'position': '116.33965,39.942184', 'mark': '2'});
+            
+                lineTrack['全景游'].push({'position': '116.33956,39.941658', 'mark': '2'});
+            
+                lineTrack['全景游'].push({'position': '116.33933,39.941383', 'mark': '1'});
+            
+                lineTrack['全景游'].push({'position': '116.33911,39.942234', 'mark': '2'});
+            
+                lineTrack['全景游'].push({'position': '116.339745,39.94257', 'mark': '2'});
+            
+                lineTrack['全景游'].push({'position': '116.33966,39.94313', 'mark': '2'});
+            
+                lineTrack['全景游'].push({'position': '116.339,39.943153', 'mark': '2'});
+            
+                lineTrack['全景游'].push({'position': '116.338066,39.94298', 'mark': '1'});
+            
+                lineTrack['全景游'].push({'position': '116.33685,39.94321', 'mark': '1'});
+            
+                lineTrack['全景游'].push({'position': '116.33628,39.943287', 'mark': '1'});
+            
+                lineTrack['全景游'].push({'position': '116.33628,39.94274', 'mark': '2'});
+            
+                lineTrack['全景游'].push({'position': '116.33624,39.942513', 'mark': '2'});
+            
+                lineTrack['全景游'].push({'position': '116.33561,39.942562', 'mark': '2'});
+            
+                lineTrack['全景游'].push({'position': '116.33508,39.94257', 'mark': '1'});
+            
+                lineTrack['全景游'].push({'position': '116.33448,39.94262', 'mark': '2'});
+            
+                lineTrack['全景游'].push({'position': '116.33405,39.94262', 'mark': '1'});
+            
+                lineTrack['全景游'].push({'position': '116.33345,39.942783', 'mark': '1'});
+            
+                lineTrack['全景游'].push({'position': '116.33268,39.94313', 'mark': '1'});
+            
+                lineTrack['全景游'].push({'position': '116.332344,39.943336', 'mark': '2'});
+            
+                lineTrack['全景游'].push({'position': '116.33199,39.943253', 'mark': '2'});
+            
+                lineTrack['全景游'].push({'position': '116.33166,39.94309', 'mark': '2'});
+            
+                lineTrack['全景游'].push({'position': '116.3314,39.942905', 'mark': '2'});
+            
+                lineTrack['全景游'].push({'position': '116.33129,39.94271', 'mark': '2'});
+            
+                lineTrack['全景游'].push({'position': '116.331314,39.94248', 'mark': '2'});
+            
+        
+
+
+        var domOperateBack=domOperate();
+        domOperateBack.verify();//验证是否激活
+        c.showAd=domOperateBack.showAd; //显示广告弹窗
+        if(c.distributorId=="140"){ //有品味特殊处理，去掉广告窗和app下载条
+        $("#closePopularize").trigger(c.clickEvent);
+        }
+
+        if(c.urlArg.weChat=="true"){
+        $(".a-buy").attr("href",$(".a-buy").attr("href")+"&weChat=true");
+
+        if(!(c.token&&c.userId)){
+
+        $(".a-buy").attr("href","login.html?redirection=true");
+
+        if(c.isiOS){
+        window.addEventListener("pageshow", function(){
+
+        if(sessionStorage.myOrderGoBack==1){
+        location.reload();
+        sessionStorage.setItem('myOrderGoBack',2);
+        }
+        })
+        }
+
+        }
+
+        }
+
+        function intiMap(){ //
+
+        c.map=new LaeflatMapModule({ //新建一个地图对象
+        container:"map",
+        scenicName:c.scenicName,
+        center:c.mapData.center,
+        zoom:c.mapData.zoom,
+        zoomControl:false,
+        minZoom:c.mapData.zoomRange[0]||7,
+
+        maxZoom:c.mapData.zoomRange[1]||19,
+        zoomAnimationThreshold:1,
+        maxBounds:[c.mapData.rightTop,c.mapData.leftBottom]
+        });
+
+        function addImageLayers(){}
+
+        
+            
+            
+                function addImageLayers(){
+                for(var i=0,len=c.mapData.imageLayer.length;i<len;i++){ //添加图层
+
+
+                c.map.addImageLayer(c.mapData.imageLayer[i],c.mapData.imageLayer[i].subMap);
+
+
+                }
+                }
+            
+        
+
+
+        c.map.autoZoomRange();//自动设置地图大小
+
+
+        
+        c.map.markerList=c.map.addMarkers(c.mapData.markers); //添加marker点
+        c.map.groupLayer=c.map.addMarkerCluster(c.map.markerList,{"scenic":true});
+        c.map.groupMarkerList=c.map.addMarkers(c.mapData.groupMarkers,{className:'group'});
+        c.map.childGrounpMarker=c.map.addMarkers(c.mapData.childGrounpMarker,{className:' child-grounp'});
+        c.map.allMarkersLyer=L.layerGroup().addLayer(c.map.groupLayer);
+
+      
+
+        if(c.map.groupMarkerList){
+            c.map.allMarkersLyer.addLayer(L.layerGroup(c.map.groupMarkerList));
+            c.map.markerList= c.map.markerList.concat(c.map.groupMarkerList);
+        } 
+       if(c.map.childGrounpMarker.length>0){
+            c.map.allMarkersLyer.addLayer(L.layerGroup(c.map.childGrounpMarker)) 
+            c.map.markerList= c.map.markerList.concat(c.map.childGrounpMarker);
+            
+		}
+
+        // c.map.childGrounpMarker.addTo(c.map.map);
+        c.map.allMarkersLyer.addTo(c.map.map);
+
+
+        c.currentMarkerList={
+        markerList:c.map.markerList,
+        listNav:$("#sceniclist")
+        }
+        c.map.lineData=lineTrack;//绑定路线数据
+        c.getOrientation();
+        c.orientation=false;
+        c.map.startLocate(); //开始定位
+        domOperateBack.domOperateForMap(c.map);//给map元素绑定事件
+
+        //取消自动讲解语音提醒
+        //c.$audio.data("guidePlaying","false");
+        //c.$audio.data("guidePlayed","true");
+
+        return {
+        addImageLayers:addImageLayers
+        }
+        }
+        var intiMap=intiMap();
+
+        intiMap.addImageLayers();
+
+
+        })
+
+
+        </script>
+        </body>
+        </html>
+        <script data-src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" id='wechatShare' ></script>
+        <script src="./js/wechatShare.js"></script>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/common.css">
+    <title>Zooseefun</title>
+</head>
+<body>
+    <!--印章加载动画-->
+    <div id="loading">
+            <div id="loading-center">
+                    <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_four"></div>
+                    <div class="loading_txt">加载中<div class="loader"></div></div>
+                    </div>
+            </div>
+    </div>     
+   <div class="header">
+       <div class="header-title">
+            印章
+       </div>  
+       <div class="header-con">
+            <div class="returnbtn">
+                <a href="javascript:history.back(-1)"></a>
+            </div>
+            <div class="btns">
+                    <a href="javascript:;" class="share" id="share"></a>
+                    <a href="javascript:;" class="seal_map_btn" id="seal-btn"></a>
+            </div>
+        </div> 
+  </div> 
+  <div class="main">
+      <div class="seal-list">
+           <ul>
+              
+               <!-- <li>
+                    <img src="seal_image/seal-01.png"/>
+                    <span>1</span>
+                </li>
+                <li>
+                    <img src="seal_image/seal-01.png"/>
+                    <span>1</span>
+                </li>
+                <li>
+                    <img src="seal_image/seal-01.png"/>
+                    <span>1</span>
+                </li>
+                <li>
+                    <img src="seal_image/seal-01.png"/>
+                    <span>1</span>
+                </li> -->
+                <!-- <li>
+                <img src="seal_image/seal-01.png"/>
+                </li> -->
+           </ul>
+           
+      </div>
+      <div class="seal_map_wrapper">
+        <div class="seal_map" id="seal_map">
+            <svg xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(-50,-50)" id="map_father">
+                    <image xlink:href="seal_image/zoo-map.jpg" x="0" y="0" height="678px" width="980px"/>
+                </g>
+            </svg>
+        </div>
+    </div>
+  </div>
+  <!--分享模态框-->
+  <div class="share_modal">
+    <div class="tag">
+        <p>请点击右上角将他发送给<br>
+           指定朋友或分享到朋友圈
+        </p>
+    </div>
+    <img src="image/voice-finger.png"/>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/share.js"></script>  
+</body>
+</html>

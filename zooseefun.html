@@ -1,0 +1,67 @@
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>zooseefun</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+        <link rel="stylesheet" href="css/common.css" />
+    </head>
+<body style=" background: #ede6d6;">
+    <div id="loading">
+        <div id="loading-center">
+                <div id="loading-center-absolute">
+                <div class="object" id="object_one"></div>
+                <div class="object" id="object_two"></div>
+                <div class="object" id="object_three"></div>
+                <div class="object" id="object_four"></div>
+                <div class="loading_txt">识别中<div class="loader"></div></div>
+                </div>
+        </div>
+    </div>  
+    <header>
+            <div class="nav">
+                <div class="nav-left locationInfo">
+                     <a href="javascript:;">
+                         <img src="images/locationBtn.png" alt="">
+                         <span>正在获取地理位置...</span>
+                     </a>
+                </div>
+                <div class="nav-right">
+                    <!--直播-->
+                    <a href="videoList.html">
+                        <img src="images/liveBtn.png" alt="">
+                        <span>直播</span>
+                    </a>
+                    <!--印章-->
+                    <a href="javascript:;" id="seal_btn" class="seal_btn">
+                        <img src="images/sealimgBtn.png" alt="">
+                        <span>印章</span>
+                    </a>
+                    <!--商城-->
+                    <a href="Zooseefun_shop/allProduct.html">
+                        <img src="images/shopBtn.png" alt="">
+                        <span>商城</span>
+                    </a>
+                </div>
+            </div>
+    </header>   
+    <div class="zooseefun">
+        <div class="logo">
+            <img src="images/logo.png" />
+        </div>
+        <div class="seefun-btn-wrap">
+            <img class="seefun_btn" src="images/zooseefun.png" />
+        </div>
+    </div>
+     <!--导航按钮-->
+     <div class="Navigation">
+        <a href="./allAnimalInMap.html">
+            <span>导航</span>
+        </a>
+    </div>
+    <script src="js/zepto.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript"></script>
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=f99kAEYGls7AOagGUFFBkgwb" type="text/javascript"></script>
+    <script src="http://api.map.baidu.com/library/GeoUtils/1.2/src/GeoUtils_min.js"  type="text/javascript"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

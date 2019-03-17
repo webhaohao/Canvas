@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/common.css">
+    <title>Document</title>
+    <style>
+        html,body{
+             width: 100%;
+             height:100%;
+        }
+        .main{
+             width:100%;
+             height:100%;
+        }
+    </style>
+</head>
+<body> 
+        <div class="main" id="main">
+
+        </div>
+        <script src="js/echarts.min.js"></script>
+        <script src="js/zepto.min.js"></script>
+        <script>
+                var myChart = echarts.init(document.getElementById('main'));
+               function drawHeartMap(){
+                option = {
+                    xAxis: {
+                        type: 'category',
+                        boundaryGap: false,
+                        data: itemName(data)
+                    },
+                    yAxis: {
+                        type: 'value'
+                    },
+                    series: [{
+                        data:convertData(data),
+                        type: 'line',
+                        areaStyle: {}
+                    }]
+                };
+                // 使用刚指定的配置项和数据显示图表。
+                myChart.setOption(option);
+                //更多地图选项         
+                // var bmap = myChart.getModel().getComponent('bmap').getBMap();
+                // bmap.addControl(new BMap.MapTypeControl());
+                //console.log(convertData(value,100));
+               }     
+                var time=JSON.stringify({
+                        startTime:"2018-05-15 00:00",
+                        endTime:"2018-05-17 00:00"
+                })
+              $.ajax({
+                  type:'POST',
+                  url:'http://www.zooseefun.net/Report_Forms/getReportFormsByTime',
+                  data:{time:time},
+                  success:function(data){
+                        console.log(data);
+                  }
+              })
+            var data=[{"Lon":"116.349342","Time":"2018-05-15 10:21:00.0","animalId":26,"count":"90","lat":"39.948392","location":"猫科动物馆","name":"狞猫","reportId":115},{"Lon":"116.349342","Time":"2018-05-15 10:22:00.0","animalId":6,"count":"1","lat":"39.948392","location":"猫科动物馆","name":"猎豹","reportId":116},{"Lon":"116.346876","Time":"2018-05-15 20:50:00.0","animalId":16,"count":"300","lat":"39.94602","location":"夜行动物馆","name":"小熊猫","reportId":117},{"Lon":"116.348897","Time":"2018-05-15 21:10:00.0","animalId":7,"count":"1","lat":"39.945216","location":"猴山","name":"猕猴","reportId":118},{"Lon":"116.34084","Time":"2018-05-15 21:22:00.0","animalId":1,"count":"150","lat":"39.948398","location":"长颈鹿馆","name":"长颈鹿","reportId":119}]
+            var convertData = function (data) {
+                    var res = [];
+                    for (var i = 0; i < data.length; i++) {
+                        // var geoCoord = geoCoordMap[data[i].name];
+                        // if (geoCoord) {
+                        //     res.push(geoCoord.concat(data[i].value+ (Math.random()-0.5)*n ));
+                        // }
+                        // console.log(geoCoord.concat(data[i].value+ (Math.random()-0.5)*n ));
+                        res.push(data[i].count);
+                    }
+                    console.log(res);
+                    return res;
+            };
+            var itemName=function(data){
+                var res = [];
+                for (var i = 0; i < data.length; i++) {
+                        // var geoCoord = geoCoordMap[data[i].name];
+                        // if (geoCoord) {
+                        //     res.push(geoCoord.concat(data[i].value+ (Math.random()-0.5)*n ));
+                        // }
+                        // console.log(geoCoord.concat(data[i].value+ (Math.random()-0.5)*n ));
+                        res.push(data[i].name);
+                    }
+                    console.log(res);
+                    return res;
+            }
+            drawHeartMap();
+            console.log(data);
+    
+        </script>
+</body>
+</html>

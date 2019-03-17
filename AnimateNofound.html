@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<link rel="stylesheet" href="css/common.css">
+		<style type="text/css">
+			body{
+				background:#eadbbc;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<div class="nav">
+				<div class="nav-left">
+					<!--个人中心-->
+					 <a href="javascript:;">
+						 <img src="images/personBtn.png" alt="">
+					 </a>
+				</div>
+				<div class="nav-right">
+					 <!--直播-->
+					 <a href="video.html">
+						<img src="images/liveBtn.png" alt="">
+						<span>直播</span>
+					</a>
+					<!--印章-->
+					<a href="javascript:;" id="seal_btn" class="seal_btn">
+						<img src="images/sealimgBtn.png" alt="">
+						<span>印章</span>
+					</a>
+					<!--商城-->
+					<a href="Zooseefun_shop/index.html">
+						<img src="images/shopBtn.png" alt="">
+						<span>商城</span>
+					</a>
+				</div>
+			</div>
+		</header>
+		<!--动画提示的功能-->
+		<div class="user_Prompt">
+			<div class="ani_con">
+				<div class="user_Prompt_con">
+					<div class="user_Prompt_img ">
+						<img src="./images/animateNofound.png" alt="" class="zoomOutSlow"/>
+					</div>
+					<div class="fix_img">
+						<span class="top_left_img bounceFast"></span>
+						<span class="top_right_img bounceFast"></span>
+						<span class="bottom_left_img bounceFast"></span>
+						<span class="bottom_right_img bounceFast"></span>
+					</div>
+				</div>
+				<div class="user_Prompt_info">
+					<p>不要离动物太远哦,再试一次吧</p>
+				</div>
+			</div>
+			
+		</div>
+        <!--导航按钮-->
+        <div class="navigation_wrapper">
+        	<a href="./allAnimalInMap.html"></a>
+		</div>
+		<div class="seefun-btn-wrap" style="position:fixed;bottom:.3rem;">
+            <img class="seefun_btn" src="images/zooseefun.png" />
+		</div>
+		 <!--拍照加载动画-->
+		 <div id="loading">
+			<div id="loading-center">
+					<div id="loading-center-absolute">
+					<div class="object" id="object_one"></div>
+					<div class="object" id="object_two"></div>
+					<div class="object" id="object_three"></div>
+					<div class="object" id="object_four"></div>
+					<div class="loading_txt">识别中<div class="loader"></div></div>
+					</div>
+			</div>
+		</div>     
+	</body>
+	<script src="js/zepto.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript"></script>
+	<script src="js/common.js"></script>
+	<script>
+		  //点击印章跳转到用户印章页面
+		  $("#seal_btn").on('tap',function(e){
+			e.preventDefault();
+			window.location.href="./seal.html?userId="+window.sessionStorage.getItem("wxUserInfo");
+    	})
+	</script>
+</html>

@@ -1,0 +1,234 @@
+body{
+    margin:0px;
+    padding:0px;
+    font-size: 12px;
+    font-family: "微软雅黑", "PingFangSC-Regular", "Microsoft YaHei", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background:#fff;
+}
+html{
+     font-size:100px;
+}
+*{
+    box-sizing:border-box;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color:transparent;
+    -webkit-touch-callout: none;
+}
+canvas{
+    display: block;
+    box-sizing:border-box;
+    margin:0 auto;
+}
+
+input {
+  font-family:"微软雅黑", "PingFangSC-Regular", "Microsoft YaHei", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+p,h1,h2,h3,h4,h5,h6{
+  margin:0px;
+  padding:0px;
+}
+ul,li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+dl,
+dt,
+dd {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+
+a,
+a:hover,
+a:active,
+a:link {
+  text-decoration: none;
+}
+.header{
+     height:1rem;
+     line-height:1rem;
+     font-size:.3rem;
+     text-align:center;
+     font-weight:600;
+}
+.header span{
+    display:inline-block;
+    vertical-align:middle;
+}
+.header span::after{
+    content:"";
+    display:inline-block;
+    float: top;
+    width: 0;
+    height: 0;
+    border: .15rem solid transparent ;
+    border-top-color:#000;
+    background-size:cover;
+    vertical-align:middle;
+    margin-top:.05rem;
+    margin-left:.05rem;
+}
+.modal{
+     position: fixed;
+     top:0;
+     left:0;
+     width:100%;
+     height:100%;
+     background:#fff;
+     z-index:999;
+     transform:translateY(-100%);
+     transition:all 1s;
+}
+.modal.active{
+    transform:translateY(0%);
+}
+.modal .icon{
+     text-align:center;
+}
+.modal .icon span{
+    width: 0;
+    height: 0;
+    border: .15rem solid transparent ;
+    border-bottom-color:#000 ;
+    display:inline-block;
+}
+.modal-content ul li{
+    text-align:center;
+    line-height:2;
+    font-size:.6rem;
+    width:80%;
+    margin:0 auto;
+    border-bottom:.01rem solid #c2c2c2;
+}
+.pull-left{
+    float:left;
+}
+.pull-right{
+    float:right;
+}
+.item ul{
+     display:flex;
+     font-size:.3rem;
+     border-top:1px solid #efefef;
+}
+.item ul li{
+     width:33.33333%;
+     text-align:center;
+     padding:0rem .43rem;
+}
+.item ul li a{
+    padding-top:.25rem;
+    color:#aba7a6;
+    display:block;
+    border-top:.12rem solid transparent;
+    padding-bottom:.4rem;
+}
+.item ul li.active a{
+     border-top:.12rem solid #72baae;
+     color:#72baae;
+     font-weight:600;
+     transition: 1s all;
+}
+.tabs{
+	width:100%;
+	margin-bottom:.1rem;
+    height:1rem;
+    line-height:.84rem;
+    /* overflow:visible; */
+    /* overflow-y:visible; */
+}
+.tabs a{
+	display:block;
+	font-size:0.32rem;
+    color:#aba7a6;
+	
+}
+.swiper-container{
+    /* overflow:visible; */
+}
+.tabs a.active{
+	border-bottom:.1rem solid #e9b322;
+}
+.tabs .swiper-slide{
+    background-color:#f2f2f3;
+    height:.84rem;
+	/* width:auto; */
+    width:20%;
+    /* position: relative; */
+}
+.tabs .swiper-slide a{
+    text-align:center;
+}
+.tabs .swiper-slide a.active{
+    content:"";
+    position: absolute;
+    width:.96rem;
+    height:.96rem;
+    background:#ebac37;
+    left:50%;
+    transform:translateX(-50%);
+    border-bottom-right-radius:.2rem;
+    border-bottom-left-radius:.2rem;
+    box-shadow: -5px 0 5px #ccc, /*左边阴影*/
+    0 -5px 5px #ccc, /*顶部阴影*/
+    0 5px 5px #ccc, /*底部阴影*/
+    5px 0 5px #ccc; /*右边阴影*/
+    color:#fff;
+}
+.date{
+     margin-top:.62rem;
+     display:flex;
+     margin-bottom:.45rem;
+     justify-content:center;
+     font-size: 0.32rem;
+}
+.date>div:nth-child(2){
+    margin-left:.5rem;
+    margin-right:.5rem;
+    color:#aba7a6;
+}
+.date input{
+     border:none;
+     outline:none;
+     width:2.05rem;
+}
+.date span{
+    width:.45rem;
+    height:.45rem;
+    border-radius:50%;
+    background:#4966a7;
+    border:.05rem solid #d1d9e9;
+    position: relative;
+}
+.date span::before{
+     content:"";
+     width:0rem;
+     height:0rem;
+     border-left:.1rem solid transparent;
+     border-right:.1rem solid transparent;
+     border-top:.15rem solid #fff;
+     position: absolute;
+     margin-left:.07rem;
+     margin-top:0.12rem;
+     z-index:10;
+     border-radius:.02rem;
+}
+.dateInput{
+    display:flex;
+    border-bottom:1px solid #ced0d0;
+    width:2.55rem;
+    align-items:center;
+    justify-content:space-between;
+}
+#main{
+     width:7.5rem;
+     height:9.55rem;
+}
+#main02{
+    width:7.5rem;
+    height:9.55rem;
+    display:none;
+}

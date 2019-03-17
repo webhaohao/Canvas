@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/shake.css">
+</head>
+<body>
+    <div class="root">
+            <div class="intrContent">
+                <div class="header">
+                        场馆<img src="images/home.png"/>介绍
+                </div>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/timg.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/timg.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="animal-stadiums-text">
+                            大熊猫馆
+                    </div>
+                </div>
+                <div class="intrText">
+                     <div class="intrText-content">
+                          <p>
+                                超级可爱的大熊猫,超级可爱的大熊猫,不可爱不要钱,不可爱不要钱。
+                                超级可爱的大熊猫,超级可爱的大熊猫,不可爱不要钱,不可爱不要钱。
+                                超级可爱的大熊猫,超级可爱的大熊猫,不可爱不要钱,不可爱不要钱。
+                          </p>
+                          <span>看更多</span>
+                     </div>
+                </div>
+            </div>
+            <div class="animal-stadiums">
+                <div class="header sec">
+                    场馆<img src="images/animalIcon.png"/>动物
+                </div>
+                <div class="animal-s-content">
+                    <ul>
+                        <li>
+                            <div class="img-panel">
+                                 <img src="images/s.png" alt="">
+                            </div>
+                            <div class="animal-intr-text">
+                                 非洲鸵鸟
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-panel">
+                                    <img src="images/s.png" alt="">
+                            </div>
+                            <div class="animal-intr-text">
+                                    非洲鸵鸟
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-panel">
+                                    <img src="images/s.png" alt="">
+                            </div>
+                            <div class="animal-intr-text">
+                                    非洲鸵鸟
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-panel">
+                                    <img src="images/s.png" alt="">
+                            </div>
+                            <div class="animal-intr-text">
+                                    非洲鸵鸟
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </div> 
+    <script src="js/zepto.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script>
+         $(function(){
+            getFontSize();
+            function getFontSize(){
+                    //通过计算屏幕宽高比定页面基础字体大小
+                    var desW = 750,
+                    winW = document.documentElement.clientWidth;
+                    if (winW > 750) {
+                        document.documentElement.style.fontSize = "100px";
+                        return;
+                    }
+                    document.documentElement.style.fontSize = winW / desW * 100 + "px";
+            }
+            var mySwiper=new Swiper('.intrContent .swiper-container',{
+                pagination : '.swiper-pagination'
+            })
+            //字符长度超过150,出现“看更多”的按钮
+            var len = 150;
+            var text=$(".intrText-content p").html();
+            var sub=text.substring(0,len);
+            if(text.length>len){
+                sub+="....";
+                $(".intrText-content p").html(sub);
+                $(".intrText-content span").css('display','block');
+            } 
+            $(".intrText-content span").on('click',function(){
+                $(".intrText-content p").html(text);  
+                $(this).css('display','none');  
+            })
+         })   
+    </script>
+</body>
+</html>

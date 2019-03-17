@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html style="height:100%;">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+        <link rel="stylesheet" href="css/reset.min.css" />
+        <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+		<link rel="stylesheet" href="./Zooseefun_shop/css/common.css" />
+        <script src="http://api.map.baidu.com/api?v=2.0&ak=f99kAEYGls7AOagGUFFBkgwb" type="text/javascript"></script>
+    </head>
+    <style>
+        .myPic{
+            margin-top:1.2rem;
+            padding:.3rem;
+        }
+        .myPic .row::after{
+            clear:both;
+        }
+        .myPic .row::after,.myPic .row::before{
+            display: table;
+             content: " ";
+        }
+        .myPic .row>div{
+            width:50%;
+            float:left;
+            padding:.1rem;
+        }
+        .myPic .row>div img{
+            max-width:100%;
+        }
+    </style>
+	<body>
+	  <div class="header fix-header">
+	  	 	<div class="container">
+	  	 		<div class="container">
+		  	 		<div class="header_tit">
+		  	 			<a href="javascript:history.back(-1)" class="close return_btn"></a>	
+                           <h1>我的图集</h1>
+		  	 		</div>
+	  	 	    </div>
+	  	 	</div>
+      </div>
+      <div class="myPic">
+          <div class="row">
+              <!-- <div class="col-xs-3"></div>
+              <div class="col-xs-3"></div>
+              <div class="col-xs-3"></div> -->
+          </div>
+      </div>
+      <script src="js/zepto.min.js"></script>
+      <script src="js/swiper.min.js"></script>
+	  <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+      <script src="js/common.js"></script>
+      <script src="js/myPicDetail.js"></script>
+	</body>
+</html>
+

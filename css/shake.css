@@ -1,0 +1,81 @@
+*{
+    box-sizing:border-box;
+}
+.header{
+    height:50px;
+    text-align:center;
+    line-height:50px;
+    font-size:16px;
+    font-weight:bold;
+    color:#adacac;
+}
+.header.sec{
+    border-top:1px solid #888;
+    border-bottom:1px solid #888;
+}
+.header img{
+    width:26px;
+}
+.swiper-container img{
+    max-width:100%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+.intrContent .swiper-container{
+    height:5.2rem;
+}
+.intrText-content{
+    font-size:.3rem;
+    color:#adacac;
+    padding:.3rem .6rem;
+    line-height:1.5;
+}
+.animal-s-content {
+    padding:.45rem 0rem;
+}
+.animal-s-content ul{
+    overflow:hidden;
+}
+.animal-s-content ul li{
+    width:33.3333333%;
+    text-align:center;
+    float:left;
+    margin-bottom:.15rem;
+}
+.animal-s-content ul li a{
+    color:#adacac;
+}
+.animal-s-content img{
+     width:2.04rem;
+}
+.animal-stadiums-text{
+     position: absolute;
+     bottom:0;
+     height:.68rem;
+     padding-left:.2rem;
+     width:100%;
+     background:#afd1bb;
+     z-index:5;
+     line-height:.68rem;
+     font-size:.30rem;
+     color:#fff;
+     font-weight:bold;
+}
+.intrContent .swiper-pagination{
+    text-align:right;
+    padding-right:.2rem;
+}
+.intrContent .swiper-pagination-bullet{
+    background: #fff;
+    opacity:1;
+}
+.intrContent .swiper-pagination-bullet-active{
+    background: #32a99c;
+}
+.intrText-content span{
+    display:none;
+    text-align:right;
+    font-weight:bold;
+}

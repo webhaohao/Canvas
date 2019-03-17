@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+            getFontSize();
+            function getFontSize() {
+                //通过计算屏幕宽高比定页面基础字体大小
+                var desW = 750,
+                winW = document.documentElement.clientWidth;
+                if (winW > 750) {
+                    document.documentElement.style.fontSize = "100px";
+                    return;
+                }
+                document.documentElement.style.fontSize = winW / desW * 100 + "px";
+            }
+    </script>
+    <link rel="stylesheet" href="./css/swiper-3.3.1.min.css" />
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/LCalendar.min.css">
+    <title>统计图</title>
+</head>
+<body>
+    <div class="modal">
+            <div class="icon">
+                  <span></span>
+            </div>
+            <div class="modal-content">
+                <ul>
+                   
+                </ul>
+            </div>
+    </div>
+    <div class="header">
+          <span>北京动物园</span> 
+    </div> 
+    <div class="screen">
+            <div class="item">
+                    <ul>
+                        <li class="active" data-type="bar">
+                            <a href="javascript:;">柱状图</a>
+                           
+                        </li>
+                        <li data-type="line">
+                            <a href="javascript:;">折线图</a>
+                           
+                        </li>
+                        <li data-type="heatmap">
+                            <a href="javascript:;">热力图</a> 
+                        </li>
+                    </ul>
+            </div>
+            <div class="timeItem">
+                <div class="swiper-container tabs">
+                        <div class="swiper-wrapper">
+                            <!-- <div class="swiper-slide">
+                                <a href="javascript:;" class="active">
+                                    实时
+                                </a>
+                            </div> -->
+                            <div class="swiper-slide">	
+                                <a href="javascript:;" class="active">
+                                    昨日
+                                </a>
+                            </div>
+                            <div class="swiper-slide">	
+                                <a href="javascript:;">
+                                    本月
+                                </a>
+                            </div>
+                            <div class="swiper-slide">	
+                                <a href="javascript:;">
+                                    上月
+                                </a>
+                            </div>
+                            <div class="swiper-slide">	
+                                <a href="javascript:;">
+                                    今年
+                                </a>
+                            </div>
+                            <!-- <div class="swiper-slide">	
+                                <a href="javascript:;">
+                                    未知
+                                </a>
+                            </div> -->
+                            <div class="swiper-slide">	
+                                    <a href="javascript:;">
+                                        未知
+                                    </a>
+                            </div>
+                        </div> 
+                </div> 
+            </div>
+            <div class="date">
+                   <div class="dateInput">
+                        <input type="text" id="startTime" readonly="" value="">
+                        <span></span>
+                    </div>
+                    <div>至</div>
+                    <div class="dateInput">
+                        <input type="text" id="endTime" readonly="" value="">
+                        <span></span>
+                    </div> 
+            </div>
+            <div class="main" id="main">
+                
+            </div>
+            <div class="main" id="main02"></div>
+    </div>
+    <script src="./js/zepto.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/LCalendar.min.js"></script>
+    <script src="./js/echarts.min.js"></script>
+    <script src="./js/bmap.js"></script>
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=f99kAEYGls7AOagGUFFBkgwb"></script>
+    <script src="./js/map.js"></script>
+</body>
+</html>
